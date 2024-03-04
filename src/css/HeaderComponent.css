@@ -1,0 +1,72 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+  
+.header-solid {
+    background-color: #333;
+    /* background-color: green; */
+}
+
+.logo img {
+    margin-left: 20px;
+    max-width: 100px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navHeader{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLoginButton,
+.headerContactButton {
+    padding: 10px;
+    outline: solid 1px white;
+    border-radius: 2px;
+    background-color: rgba(112, 112, 112, 0.3);
+    color: white;
+}
+
+.headerContactButton:hover,
+.headerLoginButton:hover {
+    color: gray;
+    background-color: white;
+}
+  
+.left-buttons ul,
+.right-buttons ul {
+    list-style: none;
+    /* margin-left: 20px; */
+    /* padding: 10px; */
+    /* outline: solid 1px white; */
+    /* border-radius: 2px; */
+    /* background-color: rgba(112, 112, 112, 0.3); */
+    /* color: red; */
+}
+
+
+.right-buttons {
+    margin-left: auto;
+    padding-right: 50px;
+}
+
+  
+
+
