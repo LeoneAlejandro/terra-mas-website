@@ -1,0 +1,115 @@
+.contenido {
+    padding-top: 100px;
+    background-image: url('../assets/corn-field.jpg'); /* Replace with your image file path */
+    background-size: cover; /* Adjust as needed */
+    background-position: center center; /* Adjust as needed */
+    background-repeat: no-repeat;
+    color: #fff; /* Set text color to ensure readability on the background */
+    /* Add any additional styling for your contenido div */
+    height: 85vh;
+    width: 100%;
+}
+
+
+.video {
+    z-index: -1;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+
+
+.sobreNosotros {
+    display: flex;
+    background-color: white;
+    height: 400px;
+}
+
+.sobreNosotrosTexto,
+.nuevasTecnologiasTexto {
+    width: 50%;
+    display: 1;
+}
+
+.sobreNosotrosImagen {
+    background-image: url('../assets/terra-mas-frente.jpg');
+    width: 50%;
+    display: 1;
+    background-size: cover;
+    /* background-position: center center; */
+    background-repeat: no-repeat;
+}
+
+.sobreNosotrosTitle {
+    padding-left: 55px;
+    padding-top: 20px;
+    text-align: left;
+    color: green;
+    /* font-family: 'Brava Slab Bold', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.sobreNosotrosParagraph {
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 60px;
+    color: rgb(122, 121, 121);
+    font-weight: 450;
+    /* font-family: 'Brava Slab Bold', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.nuevasTecnologias {
+    display: flex;
+    background-color: white;
+    height: 400px;
+}
+
+.nuevasTecnologiasImagen {
+    background-image: url('../assets/sobreNosotrosImagen.png');
+    width: 50%;
+    display: 1;
+    background-size: cover;
+    /* background-position: center center; */
+    background-repeat: no-repeat;
+}
+
+.nuevasTecnologiasTitle {
+    /* margin: 0px; */
+    padding-left: 55px;
+    padding-top: 20px;
+    text-align: left;
+    color: green;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nuevasTecnologiasParagraph {
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 60px;
+    color: rgb(122, 121, 121);
+    font-weight: 450;
+    font-family: 'Poppins', sans-serif;
+}
+
+.conoceMasLink {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.conoceMasLink:visited {
+    color: rgb(37, 122, 22);
+    font-weight: 400;
+}
+

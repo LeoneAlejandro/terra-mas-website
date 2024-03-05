@@ -1,0 +1,45 @@
+.cultivarPlusBayer {
+    /* display: flex;
+    background-color: white;
+    height: 400px; */
+}
+
+.cultivarPlus {
+    display: flex;
+    background-color: white;
+    height: 400px;
+}
+
+.cultivarPlusTexto {
+    width: 50%;
+    display: 1;
+}
+
+.cultivarPlusImagen {
+    background-image: url('../assets/banner_cultivar.png');
+    background-size: contain;
+    background-repeat: no-repeat;   
+    width: 50%;
+    display: 1;
+}
+
+
+.bayerInsumos {
+    display: flex;
+    background-color: white;
+    height: 400px;
+}
+
+.bayerInsumosImagen {
+    background-image: url('../assets/banner_productos_bayer.png');
+    background-color: gray;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50%;
+    display: 1;
+}
+
+.bayerInsumosTexto {
+    width: 50%;
+    display: 1;
+}

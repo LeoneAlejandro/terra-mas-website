@@ -33,6 +33,8 @@ export default function HeaderComponent() {
 
             <div className="left-buttons">
                 <ul>
+                    <li><a className='headerContactButton' href="#">DEKALB</a></li>
+                    <li><a className='headerContactButton' href="#">INSUMOS</a></li>
                     <li><a className='headerContactButton' href="#">CONTACTO</a></li>
                 </ul>
             </div>

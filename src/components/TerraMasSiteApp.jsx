@@ -1,7 +1,10 @@
 //import AuthProvider, {useAuth} from './security/AuthContext'
 import HeaderComponent from './HeaderComponent'
+import HomeComponent from './HomeComponent'
+import UbicationComponent from './UbicationComponent'
+import FooterComponent from './FooterComponent'
+import CultivarPlusBayer from './CultivarPlusBayer'
 import '../css/TerraMasSiteApp.css'
-
 
 export default function TerraMasSiteApp() {
 
@@ -19,7 +22,27 @@ export default function TerraMasSiteApp() {
 
             <HeaderComponent/>
 
-            <div className='contenido'></div>
+            <HomeComponent/>
+
+            <CultivarPlusBayer/>
+
+            <UbicationComponent/>
+
+            <FooterComponent/>
+
+        </div>
+    )
+}
+
+
+
+
+
+
+
+
+
+            {/* <div className='contenido'></div>
 
             <div className='sobreNosotros'>
                 <div className="sobreNosotrosTexto">
@@ -52,9 +75,4 @@ export default function TerraMasSiteApp() {
                     CONOCE MAS
                     </p>
                 </div>
-            </div>
-
-
-        </div>
-    )
-}
+            </div> */}

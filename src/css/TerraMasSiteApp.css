@@ -1,19 +1,28 @@
 @font-face {
     font-family: 'Brava Slab Bold';
-    src: url('../assets/brava-slab-bold/Brava\ Slab\ Bold.ttf') format('woff2'),
-         url('../assets/brava-slab-bold/Brava\ Slab\ Bold.ttf') format('woff');
+    src: url('../assets/fonts/brava-slab-bold/Brava\ Slab\ Bold.ttf') format('woff2'),
+         url('../assets/fonts/brava-slab-bold/Brava\ Slab\ Bold.ttf') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Medium.ttf') format('woff2'),
+         url('../assets//fonts/Poppins/Poppins-Medium.ttf') format('woff');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+
+/* 
 .contenido {
     padding-top: 100px;
-    background-image: url('../assets/corn-field.jpg'); /* Replace with your image file path */
-    background-size: cover; /* Adjust as needed */
-    background-position: center center; /* Adjust as needed */
+    background-image: url('../assets/corn-field.jpg');
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
-    color: #fff; /* Set text color to ensure readability on the background */
-    /* Add any additional styling for your contenido div */
+    color: #fff;
     height: 85vh;
     width: 100%;
 }
@@ -36,7 +45,6 @@
     width: 50%;
     display: 1;
     background-size: cover;
-    /* background-position: center center; */
     background-repeat: no-repeat;
 }
 
@@ -81,4 +89,4 @@
     color: rgb(122, 121, 121);
     font-weight: 450;
     font-family: 'Brava Slab Bold', sans-serif;
-}
+} */
