@@ -6,7 +6,7 @@
     height: 70px;
     padding-top: 5px;
     padding-left: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     background-color: transparent;
     transition: background-color 0.3s ease-in-out;
 }
