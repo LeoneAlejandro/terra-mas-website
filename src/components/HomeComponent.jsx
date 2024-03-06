@@ -2,8 +2,6 @@ import '../css/HomeComponent.css'
 
 export default function HomeComponent() {
 
-
-
     return(
         <div className="homeComponent">
 

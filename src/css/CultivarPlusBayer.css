@@ -7,7 +7,8 @@
 .cultivarPlus {
     display: flex;
     background-color: white;
-    height: 400px;
+    /* height: 400px; */
+    height: 50vh;
 }
 
 .cultivarPlusTexto {
@@ -17,7 +18,7 @@
 
 .cultivarPlusImagen {
     background-image: url('../assets/banner_cultivar.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;   
     width: 50%;
     display: 1;
@@ -27,7 +28,8 @@
 .bayerInsumos {
     display: flex;
     background-color: white;
-    height: 400px;
+    /* height: 400px; */
+    height: 50vh;
 }
 
 .bayerInsumosImagen {
@@ -35,6 +37,7 @@
     background-color: gray;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center center;
     width: 50%;
     display: 1;
 }
@@ -42,4 +45,31 @@
 .bayerInsumosTexto {
     width: 50%;
     display: 1;
+}
+
+
+
+@media (min-width: 37.5em) and (max-width: 75em) {
+
+    /* .sobreNosotros,
+    .nuevasTecnologias {
+        display: grid;
+    } */
+
+    .cultivarPlusTexto,
+    .bayerInsumosTexto {
+        width: 80%;
+    }
+    
+    .cultivarPlusImagen {
+        width: 20%;
+        background-position: center center;
+    }
+
+    .bayerInsumosImagen {
+        width: 20%;
+        background-image: url('../assets/banner_bayer_vertical.png');
+        background-position: center center  ;
+    }
+    
 }

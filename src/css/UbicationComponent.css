@@ -1,7 +1,7 @@
 .ubicacionComponent {
     display: flex;
     background-color: white;
-    height: 400px;
+    height: 65  vh;
 }
 
 .googleMapTM {
@@ -28,47 +28,55 @@
 }
 
 .ubicacionTitle {
-    padding-left: 55px;
-    padding-top: 25px;
+    padding-left: 2vw;
+    padding-top: 1vw;
     margin: 0px;
     text-align: left;
     color: green;
     font-family: 'Poppins', sans-serif;
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 2.2vw;
 }
 
 .ubicationText {
-    margin: 0px;
     text-align: left;
-    padding-left: 30px;
-    padding-right: 60px;
+    padding-left: 0vw;
+    padding-right: 1vw;
+    /* padding-left: 30px; */
+    /* padding-right: 60px; */
     color: rgb(122, 121, 121);
     font-weight: 450;
     font-family: 'Poppins', sans-serif;
 }
 
 .ubicationText ul {
-    margin-top: 15px;
+    /* margin-top: 15px; */
+    padding-left: 2vw;
+    margin: 0px;
 }
 
 .contactosUbicacion li {
+    padding-left: 1.8vw;
     list-style: none;
-    font-size: medium;
+    font-size: 1vw;
     /* font-size: 15px; */
 }
 
+
 .contactosUbicacion h3 {
-    font-size: medium;
+    font-size: 1.2vw;
+    /* font-size: medium; */
     font-weight: normal;
-    padding: -2px;
-    margin: -2px;
+    padding-left: 1vw;
+    /* padding: -2vw; */
+    margin: -0.1vw;
     color: green;
 }
 
 .contactosUbicacion a {
+    font-size: 1.05vw;
     text-decoration: none;
     color: rgb(122, 121, 121);
-    /* background-color: red; */
 }
 
 .contactosUbicacion a:hover {

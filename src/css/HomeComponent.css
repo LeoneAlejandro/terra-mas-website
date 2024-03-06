@@ -32,11 +32,11 @@ video {
 .sobreNosotros {
     display: flex;
     background-color: white;
-    height: 400px;
+    /* height: 400px; */
+    height: 60vh;
 }
 
-.sobreNosotrosTexto,
-.nuevasTecnologiasTexto {
+.sobreNosotrosTexto {
     width: 50%;
     display: 1;
 }
@@ -51,8 +51,10 @@ video {
 }
 
 .sobreNosotrosTitle {
-    padding-left: 55px;
-    padding-top: 20px;
+    line-height: 1.3;
+    padding-left: 2.2vw;
+    padding-top: 1.2vw;
+    font-size: 2.3vw;
     text-align: left;
     color: green;
     /* font-family: 'Brava Slab Bold', sans-serif; */
@@ -61,18 +63,28 @@ video {
 
 .sobreNosotrosParagraph {
     text-align: left;
-    padding-left: 60px;
-    padding-right: 60px;
+    line-height: 1.5;
+    padding-left: 2.2vw;
+    padding-right: 2vw;
     color: rgb(122, 121, 121);
     font-weight: 450;
-    /* font-family: 'Brava Slab Bold', sans-serif; */
     font-family: 'Poppins', sans-serif;
+    font-size: 1.2vw;
+    line-height: 1.3;
+    -webkit-text-size-adjust: 100%;
 }
+
 
 .nuevasTecnologias {
     display: flex;
     background-color: white;
-    height: 400px;
+    /* height: 400px; */
+    height: 60vh;
+}
+
+.nuevasTecnologiasTexto {
+    display: 1;
+    width: 50%;
 }
 
 .nuevasTecnologiasImagen {
@@ -85,9 +97,10 @@ video {
 }
 
 .nuevasTecnologiasTitle {
-    /* margin: 0px; */
-    padding-left: 55px;
-    padding-top: 20px;
+    line-height: 1.3;
+    padding-left: 2.2vw;
+    padding-top: 1.2vw;
+    font-size: 2.3vw;
     text-align: left;
     color: green;
     font-family: 'Poppins', sans-serif;
@@ -95,17 +108,21 @@ video {
 
 .nuevasTecnologiasParagraph {
     text-align: left;
-    padding-left: 60px;
-    padding-right: 60px;
+    line-height: 1.5;
+    padding-left: 2.2vw;
+    padding-right: 2vw;
     color: rgb(122, 121, 121);
     font-weight: 450;
     font-family: 'Poppins', sans-serif;
+    font-size: 1.2vw;
+    line-height: 1.3;
+    -webkit-text-size-adjust: 100%;
 }
 
 .conoceMasLink {
     text-decoration: none;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 
 .conoceMasLink:visited {
@@ -113,3 +130,27 @@ video {
     font-weight: 400;
 }
 
+
+@media (min-width: 37.5em) and (max-width: 75em) {
+
+    /* .sobreNosotros,
+    .nuevasTecnologias {
+        display: grid;
+    } */
+
+    .sobreNosotrosTexto,
+    .nuevasTecnologiasTexto {
+        width: 80%;
+    }
+    
+    .sobreNosotrosImagen {
+        width: 20%;
+        background-position: 70% 0px;
+    }
+
+    .nuevasTecnologiasImagen {
+        width: 20%;
+        background-position: 0% 0px;
+    }
+    
+}
