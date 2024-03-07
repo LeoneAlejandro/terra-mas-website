@@ -16,26 +16,52 @@
     display: 1;
 }
 
+.cultivarPlusTitulo {
+    line-height: 1.3;
+    padding-left: 2.2vw;
+    padding-top: 1.2vw;
+    font-size: 2.3vw;
+    text-align: left;
+    color: green;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cultivarPlusParagraph {
+    text-align: left;
+    line-height: 1.5;
+    padding-left: 2.2vw;
+    padding-right: 2vw;
+    color: rgb(122, 121, 121);
+    font-weight: 450;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1vw;
+    line-height: 1.3;
+    -webkit-text-size-adjust: 100%;
+}
+
+
 .cultivarPlusImagen {
-    background-image: url('../assets/banner_cultivar.png');
+    background-image: url('../assets/programa_cultivar_h.png');
     background-size: cover;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
+    /* background-position: center 0vw;
+    background-size: 110%; */
+    /* background-position: ; */
     width: 50%;
     display: 1;
 }
-
 
 .bayerInsumos {
     display: flex;
     background-color: white;
     /* height: 400px; */
-    height: 50vh;
+    /* height: 50vh; */
 }
 
 .bayerInsumosImagen {
-    background-image: url('../assets/banner_productos_bayer.png');
+    background-image: url('../assets/bayer_banner_h.png');
     background-color: gray;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     width: 50%;
@@ -45,6 +71,31 @@
 .bayerInsumosTexto {
     width: 50%;
     display: 1;
+}
+
+.bayerInsumosTitulo {
+    margin: 0;
+    line-height: 1.3;
+    padding-left: 2.2vw;
+    padding-top: 2vw;
+    font-size: 2.3vw;
+    text-align: left;
+    color: green;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bayerInsumosParrafo {
+    text-align: left;
+    line-height: 1.5;
+    padding-left: 2.2vw;
+    padding-right: 2vw;
+    padding-bottom: 1vw;
+    color: rgb(122, 121, 121);
+    font-weight: 450;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1vw;
+    line-height: 1.3;
+    -webkit-text-size-adjust: 100%;
 }
 
 
@@ -63,13 +114,14 @@
     
     .cultivarPlusImagen {
         width: 20%;
-        background-position: center center;
+        background-position: center -10px;
+        background-image: url('../assets/programa_cultivar_v.png');
     }
 
     .bayerInsumosImagen {
         width: 20%;
-        background-image: url('../assets/banner_bayer_vertical.png');
-        background-position: center center  ;
+        background-image: url('../assets/banner_bayer_v.png');
+        background-position: center center;
     }
     
 }

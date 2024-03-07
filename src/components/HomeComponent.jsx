@@ -7,11 +7,10 @@ export default function HomeComponent() {
 
             {/* <div className='contenido'></div> */}
             <div className="video">
-                <video  loop autoPlay>
-                    <source src={require('../assets/videos/videoplayback.mp4')} type="video/mp4" /> 
+                <video  loop autoPlay muted>
+                    <source src={require('../assets/videos/dekalbRinde.mp4')} type="video/mp4" /> 
                     Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
-
             </div>
 
             <div className='sobreNosotros'>
@@ -24,10 +23,8 @@ export default function HomeComponent() {
                     <br />
                     Asesorate con nuestros ingenieros sobre los mejores híbridos Dekalb para tu siembra,
                         y nuestra gran variedad de productos de protección de cultivos.
-                    <br />
-                    <br />
-                    <a className='conoceMasLink' href="">CONOCE MAS</a>
                     </p>
+                    <a className='conoceMasLink' href="">CONOCE MAS</a>
                 </div>
                 <div className="sobreNosotrosImagen"></div>
             </div>  
@@ -45,10 +42,8 @@ export default function HomeComponent() {
                     híbridos de Dekalb con la más avanzada protección contra las principales plagas 
                     que afectan el cultivo de maíz. Trecepta presenta un efectivo control contra 
                     Spodoptera frugiperda (Cogollero) y Diatraea saccharalis (Barrenador del tallo). 
-                    <br />
-                    <br />
-                    <a className='conoceMasLink' href="">CONOCE MAS</a>
                     </p>
+                    <a className='conoceMasLink' href="">CONOCE MAS</a>
                 </div>
             </div>
 
