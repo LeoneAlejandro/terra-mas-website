@@ -6,19 +6,19 @@ export default function UbicationComponent() {
         <div className="ubicacionComponent">
             <div className="ubicacionIzquierda">
                 <div className="ubicationText">
-                    <h1 className='ubicacionTitle'>Contactanos</h1>
-                        <h3 className="contactanosH3">Administración</h3>
-                        <a className='contactanosLine' href="mailto:administracion@terramas.com.ar">administracion@terramas.com.ar</a>
-                        +54 9 2477-433335
-                        <h3 className="contactanosH3">Logísitica</h3>
-                        <a className='contactanosLine' href="mailto:logistica@terramas.com.ar">logistica@terramas.com.ar</a>
-                        +54 9 2477-662610
-                        <h3 className="contactanosH3">Ventas</h3>
-                        <a className='contactanosLine' href="mailto:ventas@terramas.com.ar">ventas@terramas.com.ar</a>
-                        <a className='contactanosLine' href="mailto:gonzalomartin@terramas.com.ar">gonzalomartin@terramas.com.ar</a>
-                        +54 9 2477-468564
-                        <h3 className="contactanosH3">Ubicación</h3>
-                        Av Venini Sur 57, Pergamino, Buenos Aires
+                    <h2 className='ubicacionTitle'>Contactanos</h2>
+                        <h4 >Administración</h4>
+                        <a  href="mailto:administracion@terramas.com.ar">administracion@terramas.com.ar</a>
+                        <br />+54 9 2477-433335
+                        <h4 >Logísitica</h4>
+                        <a  href="mailto:logistica@terramas.com.ar">logistica@terramas.com.ar</a>
+                        <br />+54 9 2477-662610
+                        <h4 >Ventas</h4>
+                        <a  href="mailto:ventas@terramas.com.ar">ventas@terramas.com.ar</a><br />
+                        <a  href="mailto:gonzalomartin@terramas.com.ar">gonzalomartin@terramas.com.ar</a>
+                        <br />+54 9 2477-468564
+                        <h4 >Ubicación</h4>
+                        <a href="/contacto">Av Venini Sur 57, Pergamino, Buenos Aires</a>
                 </div>
 
                 {/* <p className="ubicationText">

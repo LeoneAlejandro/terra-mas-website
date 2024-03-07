@@ -1,0 +1,46 @@
+.contactoBanner {
+    height: 30vw;
+    width: 100%;
+    padding-top: 5vw;
+    background-image: url('../assets/contacto_banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.contactoBannerTitulo {
+    padding-left: 0;
+    padding-top: 8vw;
+    font-size: 3.5vw;
+    color: white;
+    font-family: 'DIN';
+    display: block;
+}
+
+.contactoTerraMas {
+    /* height: 25vw; */
+    display: flex;
+}
+
+.listaContactosTerraMas {
+    width: 80%;
+    display: 1;
+}
+
+
+.contactoTerraSalto {
+    height: 25vw;
+    display: flex;
+}
+
+.listaContactosTerraSalto {
+    width: 80%;
+    display: 1;
+}
+
+.contactosGoogleMap {
+    width: 50%;
+    /* height: 300; */
+    border: 1.5vw solid white;
+    display: 1;
+}

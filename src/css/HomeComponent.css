@@ -1,14 +1,13 @@
-.contenido {
+/* .contenido {
     padding-top: 100px;
-    background-image: url('../assets/corn-field.jpg'); /* Replace with your image file path */
-    background-size: cover; /* Adjust as needed */
-    background-position: center center; /* Adjust as needed */
+    background-image: url('../assets/corn-field.jpg');
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
-    color: #fff; /* Set text color to ensure readability on the background */
-    /* Add any additional styling for your contenido div */
+    color: #fff;
     height: 85vh;
     width: 100%;
-}
+} */
 
 
 .video {
@@ -22,7 +21,7 @@
 video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     position: relative;
     top: 0;
     left: 0;
@@ -32,8 +31,6 @@ video {
 .sobreNosotros {
     display: flex;
     background-color: white;
-    /* height: 400px; */
-    /* height: 60vh; */
 }
 
 .sobreNosotrosTexto {
@@ -50,23 +47,18 @@ video {
     /* transition: transform 0.5s ease; */
 }
 
-.sobreNosotrosImagen:hover {
-    /* transform: scale(1.1); */
-    /* transition: 0.5s ease; */
-}
 
-.sobreNosotrosTitle {
+/* .sobreNosotrosTitle {
     line-height: 1.3;
     padding-left: 2.2vw;
     padding-top: 1.2vw;
     font-size: 2.3vw;
     text-align: left;
     color: green;
-    /* font-family: 'Brava Slab Bold', sans-serif; */
     font-family: 'Poppins', sans-serif;
-}
+} */
 
-.sobreNosotrosParagraph {
+/* .sobreNosotrosParagraph {
     text-align: left;
     line-height: 1.5;
     padding-left: 2.2vw;
@@ -77,14 +69,14 @@ video {
     font-size: 1.2vw;
     line-height: 1.3;
     -webkit-text-size-adjust: 100%;
-}
+} */
 
 
 .nuevasTecnologias {
     display: flex;
     background-color: white;
     /* height: 400px; */
-    height: 60vh;
+    /* height: 60vh; */
 }
 
 .nuevasTecnologiasTexto {
@@ -101,7 +93,7 @@ video {
     background-repeat: no-repeat;
 }
 
-.nuevasTecnologiasTitle {
+/* .nuevasTecnologiasTitle {
     line-height: 1.3;
     padding-left: 2.2vw;
     padding-top: 1.2vw;
@@ -109,9 +101,9 @@ video {
     text-align: left;
     color: green;
     font-family: 'Poppins', sans-serif;
-}
+} */
 
-.nuevasTecnologiasParagraph {
+/* .nuevasTecnologiasParagraph {
     text-align: left;
     line-height: 1.3;
     padding-left: 2.2vw;
@@ -121,28 +113,8 @@ video {
     font-family: 'Poppins', sans-serif;
     font-size: 1.15vw;
     line-height: 1.3;
-    /* -webkit-text-size-adjust: 100%; */
-}
+} */
 
-.conoceMasLink {
-    display: block;
-    text-align: left;
-    padding-left: 2vw;
-    padding-bottom: 1.5vw;
-    /* padding-top: 1vw; */
-    text-decoration: none;
-    font-weight: bolder;
-    font-size: 1.5vw;
-}
-
-.conoceMasLink:visited {
-    color: rgb(37, 122, 22);
-    font-weight: 400;
-}
-
-.conoceMasLink:hover {
-    color: red;
-}
 
 
 @media (min-width: 37.5em) and (max-width: 75em) {
@@ -165,6 +137,7 @@ video {
     .nuevasTecnologiasImagen {
         width: 20%;
         background-position: 0% 0px;
+        background-image: url('../assets/sobre_nosotros_v.png');
     }
     
 }

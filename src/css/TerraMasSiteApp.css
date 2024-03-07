@@ -14,6 +14,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'DIN';
+    src: url('../assets/fonts/DIN/DIN\ Next\ W01\ Heavy\ Italic.ttf') format('woff2'),
+         url('../assets/fonts/DIN/DIN\ Next\ W01\ Heavy\ Italic.ttf') format('woff');
+    font-weight: bolder;
+    font-style: normal;
+}
+
 
 /* 
 .contenido {

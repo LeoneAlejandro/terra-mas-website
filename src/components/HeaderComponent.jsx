@@ -1,5 +1,6 @@
 import '../css/HeaderComponent.css'
 import logo from '../assets/LOGO_TERRAMAS sin letars PNG.png'
+import logo_monocr from '../assets/LOGO_TERRAMAS_monocrom.png'
 import React, { useState, useEffect } from 'react';
 
 export default function HeaderComponent() { 
@@ -27,15 +28,17 @@ export default function HeaderComponent() {
         <nav className='navHeader'>
             <a href="/">
                 <div className="logo">
-                    <img src={logo} alt="Terra Mas Logo" />
+                {/* <div className={isScrolled ? 'logo' : 'logo-monocr'}> */}
+                    <img src={isScrolled ? logo : logo_monocr} alt="Terra Mas Logo" />
                 </div>
             </a>    
 
-            <div className="left-buttons">
+            {/* <div className="left-buttons"> */}
+            <div className={isScrolled ? 'left-buttons' : 'left-buttons-transpartent'}>
                 <ul>
-                    <li><a className='headerContactButton' href="#">DEKALB</a></li>
-                    <li><a className='headerContactButton' href="#">INSUMOS</a></li>
-                    <li><a className='headerContactButton' href="#">CONTACTO</a></li>
+                    <li><a className='headerContactButton' href="https://www.dekalb.com.ar/es-ar/productos-maiz.html">DEKALB</a></li>
+                    <li><a className='headerContactButton' href="https://www.cropscience.bayer.com.ar/soluciones-maiz">INSUMOS</a></li>
+                    <li><a className='headerContactButton' href="/contacto">CONTACTO</a></li>
                 </ul>
             </div>
 

@@ -9,14 +9,18 @@ export default function HomeComponent() {
             <div className="video">
                 <video  loop autoPlay muted>
                     <source src={require('../assets/videos/dekalbRinde.mp4')} type="video/mp4" /> 
+                    {/* <source src={require('../assets/videos/dekalbVideo1080.mp4')} type="video/mp4" />  */}
                     Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
             </div>
 
             <div className='sobreNosotros'>
                 <div className="sobreNosotrosTexto">
-                    <h1 className='sobreNosotrosTitle'>SOBRE NOSOTROS</h1>
-                    <p className='sobreNosotrosParagraph'>En Terra Mas nos dedicamos hace más de 20 años a 
+                    {/* <h1 className='sobreNosotrosTitle'>SOBRE NOSOTROS</h1> */}
+                    <h3>SOBRE NOSOTROS</h3>
+                    {/* <p className='sobreNosotrosParagraph'> */}
+                    <p>
+                    En Terra Mas nos dedicamos hace más de 20 años a 
                     brindar productos y servicios agropecuarios, siendo proveedores exclusivos de Bayer y 
                     Monsanto, para facilitar soluciones para tus cultivos.
                     <br />
@@ -25,6 +29,7 @@ export default function HomeComponent() {
                         y nuestra gran variedad de productos de protección de cultivos.
                     </p>
                     <a className='conoceMasLink' href="">CONOCE MAS</a>
+
                 </div>
                 <div className="sobreNosotrosImagen"></div>
             </div>  
@@ -32,8 +37,11 @@ export default function HomeComponent() {
             <div className="nuevasTecnologias">
                 <div className="nuevasTecnologiasImagen"></div>
                 <div className="nuevasTecnologiasTexto">
-                    <h1 className='nuevasTecnologiasTitle'>TECNOLOGÍAS VTPRO4 y TRECEPTA</h1>
-                    <p className='nuevasTecnologiasParagraph'>El sistema <span style={{fontWeight: 'bold'}}> VTPRO4</span> es un concepto integral que 
+                    {/* <h1 className='nuevasTecnologiasTitle'>TECNOLOGÍAS VTPRO4 y TRECEPTA</h1> */}
+                    <h3>TECNOLOGÍAS VTPRO4 y TRECEPTA</h3>
+                    {/* <p className='nuevasTecnologiasParagraph'> */}
+                    <p>
+                    El sistema <span style={{fontWeight: 'bold'}}> VTPRO4</span> es un concepto integral que 
                     combina la mejor genética con las más avanzadas tecnologías de protección de cultivo y 
                     tratamiento de semillas para potenciar el rendimiento del maíz.
                     <br />
@@ -43,7 +51,7 @@ export default function HomeComponent() {
                     que afectan el cultivo de maíz. Trecepta presenta un efectivo control contra 
                     Spodoptera frugiperda (Cogollero) y Diatraea saccharalis (Barrenador del tallo). 
                     </p>
-                    <a className='conoceMasLink' href="">CONOCE MAS</a>
+                    <a className='conoceMasLink' href="https://www.dekalb.com.ar/es-ar/productos-maiz.html">CONOCE MAS</a>
                 </div>
             </div>
 

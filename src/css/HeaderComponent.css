@@ -26,6 +26,10 @@
     /* height: 5vw; */
 }
 
+.logo-monocr img    {
+    max-width: 7vw;
+}
+
 nav a {
     margin: 1vw;
     display: flex;
@@ -44,12 +48,12 @@ nav a {
 
 .headerLoginButton,
 .headerContactButton {
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     padding: 0.5vw;
     margin: 0;
-    outline: solid 0.1vw white;
+    /* outline: solid 0.1vw white; */
     border-radius: 0.2vw;
-    background-color: rgba(112, 112, 112, 0.3);
+    /* background-color: rgba(112, 112, 112, 0.3); */
     color: white;
 }
 
@@ -59,7 +63,8 @@ nav a {
     background-color: white;
     
 }
-  
+
+
 .left-buttons ul,
 .right-buttons ul {
     list-style: none;
@@ -77,8 +82,13 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
+.left-buttons-transpartent {
+    opacity: 0;
+}
 
 .right-buttons {
     margin-left: auto;

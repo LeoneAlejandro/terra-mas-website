@@ -1,9 +1,11 @@
 //import AuthProvider, {useAuth} from './security/AuthContext'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HeaderComponent from './HeaderComponent'
 import HomeComponent from './HomeComponent'
 import UbicationComponent from './UbicationComponent'
 import FooterComponent from './FooterComponent'
 import CultivarPlusBayer from './CultivarPlusBayer'
+import ContactoComponent from './ContactoComponent'
 import '../css/TerraMasSiteApp.css'
 
 export default function TerraMasSiteApp() {
@@ -20,15 +22,28 @@ export default function TerraMasSiteApp() {
     return(
         <div className="TerraMasSiteApp">
 
+        <BrowserRouter>
+        
             <HeaderComponent/>
 
-            <HomeComponent/>
+                <Routes>
 
-            <CultivarPlusBayer/>
+                <Route path="/" element={<>
+                        <HomeComponent />
+                        <CultivarPlusBayer />
+                        <UbicationComponent />
+                    </>} />
 
-            <UbicationComponent/>
+                <Route path='/contacto' element={<ContactoComponent/>} />
 
-            <FooterComponent/>
+                </Routes>
+
+            <FooterComponent />
+
+            {/* <HomeComponent/> */}
+
+        
+        </BrowserRouter>
 
         </div>
     )

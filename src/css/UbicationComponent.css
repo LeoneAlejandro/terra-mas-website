@@ -40,7 +40,7 @@
 
 .ubicacionTitle {
     padding-top: 1.2vw;
-    padding-bottom: 1vw;
+    padding-bottom: 0.5vw;
     margin: 0;
     text-align: left;
     color: green;
@@ -49,21 +49,21 @@
     margin-left: -1vw;
 }
 
-.contactanosH3 {
+/* .contactanosH3 {
     text-align: left;
     font-size: 1.3vw;
     font-weight: bold;
     margin: 0;
     color: green;
     margin-left: -0.5vw;
-}
+} */
 
-.contactanosLine {
+/* .contactanosLine {
     font-size: 1.1vw;
     text-decoration: none;
     color: rgb(122, 121, 121);
     display: block;
-}
+} */
 
 .contactanosLine:hover {
     color: green;
