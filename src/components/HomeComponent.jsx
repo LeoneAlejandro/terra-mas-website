@@ -28,7 +28,7 @@ export default function HomeComponent() {
                     Asesorate con nuestros ingenieros sobre los mejores híbridos Dekalb para tu siembra,
                         y nuestra gran variedad de productos de protección de cultivos.
                     </p>
-                    <a className='conoceMasLink' href="">CONOCE MAS</a>
+                    <a className='conoceMasLink' href="">CONOCE MAS SOBRE NOSOTROS</a>
 
                 </div>
                 <div className="sobreNosotrosImagen"></div>
@@ -51,7 +51,7 @@ export default function HomeComponent() {
                     que afectan el cultivo de maíz. Trecepta presenta un efectivo control contra 
                     Spodoptera frugiperda (Cogollero) y Diatraea saccharalis (Barrenador del tallo). 
                     </p>
-                    <a className='conoceMasLink' href="https://www.dekalb.com.ar/es-ar/productos-maiz.html">CONOCE MAS</a>
+                    <a className='conoceMasLink' href="https://www.dekalb.com.ar/es-ar/productos-maiz.html">CONSULTA TODAS NUESTRAS VARIEDADES ACÁ</a>
                 </div>
             </div>
 

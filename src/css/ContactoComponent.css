@@ -1,5 +1,5 @@
 .contactoBanner {
-    height: 30vw;
+    height: 32vw;
     width: 100%;
     padding-top: 5vw;
     background-image: url('../assets/contacto_banner.jpg');
@@ -10,7 +10,7 @@
 
 .contactoBannerTitulo {
     padding-left: 0;
-    padding-top: 8vw;
+    padding-top: 8.2vw;
     font-size: 3.5vw;
     color: white;
     font-family: 'DIN';

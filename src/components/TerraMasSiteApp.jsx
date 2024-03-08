@@ -7,6 +7,7 @@ import FooterComponent from './FooterComponent'
 import CultivarPlusBayer from './CultivarPlusBayer'
 import ContactoComponent from './ContactoComponent'
 import '../css/TerraMasSiteApp.css'
+import LoginComponent from './LoginComponent'
 
 export default function TerraMasSiteApp() {
 
@@ -28,20 +29,21 @@ export default function TerraMasSiteApp() {
 
                 <Routes>
 
-                <Route path="/" element={<>
-                        <HomeComponent />
-                        <CultivarPlusBayer />
-                        <UbicationComponent />
-                    </>} />
+                    <Route path="/" element={<>
+                            <HomeComponent />
+                            <CultivarPlusBayer />
+                            <UbicationComponent />
+                        </>} />
 
-                <Route path='/contacto' element={<ContactoComponent/>} />
+                    <Route path='/contacto' element={<ContactoComponent/>} />
+
+                    <Route path='/login' element={<LoginComponent/>}></Route>
+
+                    <Route path='/sobre-nosotros' element={<LoginComponent/>}></Route>
 
                 </Routes>
 
             <FooterComponent />
-
-            {/* <HomeComponent/> */}
-
         
         </BrowserRouter>
 

@@ -44,39 +44,11 @@ video {
     display: 1;
     background-size: cover;
     background-repeat: no-repeat;
-    /* transition: transform 0.5s ease; */
 }
-
-
-/* .sobreNosotrosTitle {
-    line-height: 1.3;
-    padding-left: 2.2vw;
-    padding-top: 1.2vw;
-    font-size: 2.3vw;
-    text-align: left;
-    color: green;
-    font-family: 'Poppins', sans-serif;
-} */
-
-/* .sobreNosotrosParagraph {
-    text-align: left;
-    line-height: 1.5;
-    padding-left: 2.2vw;
-    padding-right: 2vw;
-    color: rgb(122, 121, 121);
-    font-weight: 450;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2vw;
-    line-height: 1.3;
-    -webkit-text-size-adjust: 100%;
-} */
-
 
 .nuevasTecnologias {
     display: flex;
     background-color: white;
-    /* height: 400px; */
-    /* height: 60vh; */
 }
 
 .nuevasTecnologiasTexto {
@@ -85,44 +57,15 @@ video {
 }
 
 .nuevasTecnologiasImagen {
-    background-image: url('../assets/sobreNosotrosImagen.png');
+    background-image: url('../assets/nuevas_tecnologias_h.png');
     width: 50%;
     display: 1;
     background-size: cover;
-    /* background-position: center center; */
     background-repeat: no-repeat;
 }
 
-/* .nuevasTecnologiasTitle {
-    line-height: 1.3;
-    padding-left: 2.2vw;
-    padding-top: 1.2vw;
-    font-size: 2.3vw;
-    text-align: left;
-    color: green;
-    font-family: 'Poppins', sans-serif;
-} */
 
-/* .nuevasTecnologiasParagraph {
-    text-align: left;
-    line-height: 1.3;
-    padding-left: 2.2vw;
-    padding-right: 2vw;
-    color: rgb(122, 121, 121);
-    font-weight: 450;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.15vw;
-    line-height: 1.3;
-} */
-
-
-
-@media (min-width: 37.5em) and (max-width: 75em) {
-
-    /* .sobreNosotros,
-    .nuevasTecnologias {
-        display: grid;
-    } */
+@media (min-width: 600px) and (max-width: 940px) {
 
     .sobreNosotrosTexto,
     .nuevasTecnologiasTexto {
@@ -137,7 +80,40 @@ video {
     .nuevasTecnologiasImagen {
         width: 20%;
         background-position: 0% 0px;
-        background-image: url('../assets/sobre_nosotros_v.png');
+        background-image: url('../assets/nuevas_tecnologias_v.png');
     }
     
+}
+
+
+@media (min-width: 0px) and (max-width: 600px) {
+
+    .sobreNosotros {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: white;
+    }
+
+    .sobreNosotrosTexto,
+    .nuevasTecnologiasTexto {
+        width: 100%;
+    }
+    
+    .sobreNosotrosImagen {
+        width: 100%;
+        height: 20vw;
+        background-position: center center;
+    }
+
+    .nuevasTecnologias {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nuevasTecnologiasImagen {
+        width: 100%;
+        height: 20vw;
+        /* background-position: 0% 0px; */
+        background-image: url('../assets/trecepta_banner.png');
+    }
 }

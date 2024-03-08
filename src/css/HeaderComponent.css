@@ -4,11 +4,6 @@
     left: 0;
     width: 100%;
     height: 5.6vw;
-    /* height: 70px; */
-    /* height: 10vh; */
-    /* padding-top: 0.5vw; */
-    /* padding-left: 0.7vw; */
-    /* padding-bottom: 0.2vw; */
     background-color: transparent;
     transition: background-color 0.3s ease-in-out;
 }
@@ -19,11 +14,7 @@
 
 
 .logo img {
-    /* align-items: center center; */
-    /* justify-content: center; */
-    /* margin-left: 1vw; */
     max-width: 7vw;
-    /* height: 5vw; */
 }
 
 .logo-monocr img    {
@@ -51,9 +42,7 @@ nav a {
     font-size: 1.4vw;
     padding: 0.5vw;
     margin: 0;
-    /* outline: solid 0.1vw white; */
     border-radius: 0.2vw;
-    /* background-color: rgba(112, 112, 112, 0.3); */
     color: white;
 }
 
@@ -71,14 +60,15 @@ nav a {
     display: flex;
     padding: 0;
     margin: 0;
+    align-items: center;
 }
 
 .left-buttons li {
-    /* padding-right: 10px; */
     padding-right: 1vw;
 }
 
 .left-buttons {
+    padding-left: 1.5vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,21 +76,26 @@ nav a {
     transition: opacity 0.5s ease;
 }
 
-.left-buttons-transpartent {
+/* .left-buttons-transpartent {
     opacity: 0;
-}
+} */
 
 .right-buttons {
     margin-left: auto;
-    /* padding-right: 50px; */
     padding-right: 3vw; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.instagram-logo {
+    height: 2vw;
+    vector-effect: non-scaling-stroke; 
+}
 
+.instagram-logo:hover {
+    fill: gray;
+}
 
-  
 
 
