@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 export default function LoginComponent() {
 
-    const [isSignUpActive, setIsSignUpActive] = useState(true);
+    const [isSignUpActive, setIsSignUpActive] = useState(false);
 
     const handleSignUpClick = () => {
         setIsSignUpActive(true);
@@ -60,7 +60,7 @@ export default function LoginComponent() {
                             </div>
 
                             <div className={`overlay-panel overlay-right ${!isSignUpActive ? 'active' : ''}`}>
-                                <h1 className='loginTitulo'>Bienvenido</h1>
+                                <h1 className='loginTitulo'>Bienvenido !</h1>
                                 <p className='loginParrafo'>Si todavía no creaste una cuenta lo podés hacer mediante le siguiente botón</p>
                                 <button className="ghost" onClick={handleSignUpClick}>Crear cuenta</button>
                             </div>
