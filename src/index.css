@@ -27,7 +27,7 @@ h1 {
 
 h3 {
   line-height: 1.3;
-  padding-left: 2.2vw;
+  padding-left: 3vw;
   padding-top: 1vw;
   margin-bottom: 0.7vw;
   font-size: 2.3vw;
@@ -59,27 +59,26 @@ a:hover {
 
 p {
   text-align: left;
-  line-height: 1.5;
-  padding-left: 2.2vw;
+  padding-left: 3vw;
   padding-right: 2vw;
   padding-bottom: 1vw;
   color: rgb(122, 121, 121);
   font-weight: 450;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.2vw;
-  line-height: 1.3;
+  font-size: 1.1vw;
+  line-height: 1.5;
   -webkit-text-size-adjust: 100%;
 }
 
 .conoceMasLink {
-  display: block;
-  text-align: left;
-  padding-left: 2vw;
-  padding-bottom: 3vw;
-  /* padding-top: 1vw; */
+  margin-left: 3vw;
+  margin-bottom: 3vw;
   text-decoration: none;
   font-weight: bolder;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
 .conoceMasLink:visited {
@@ -90,3 +89,19 @@ p {
 .conoceMasLink:hover {
   color: gray;
 }
+
+.arrowSvg {
+  margin-left: 0.5vw;
+  height: 24px;
+  width: 24px;
+  /* width="24" height="24" */
+  /* fill="none" stroke="#000" stroke-width="2"  */
+  fill: none;
+  stroke: rgb(37, 122, 22);
+  stroke-width: 2;
+}
+
+.conoceMasLink:hover .arrowSvg {
+  stroke: gray; /* Set the desired color when hovered */
+}
+

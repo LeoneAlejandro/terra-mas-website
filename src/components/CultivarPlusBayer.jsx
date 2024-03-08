@@ -18,7 +18,12 @@ export default function CultivarPlusBayer() {
                         <br />
                         Conocé más sobre nuestros planes <span style={{fontWeight: 'bold'}}> Cultivar</span> y <span style={{fontWeight: 'bold'}}> Cultivar Plus</span>, y como participar en ellos.
                     </p>
-                    <a className='conoceMasLink' href="https://www.dekalb.com.ar/es-ar/programa-cultivar.html">CONSULTÁ NUESTROS PROGRAMAS ACÁ</a>
+                    <a className='conoceMasLink' href="https://www.dekalb.com.ar/es-ar/programa-cultivar.html">CONSULTÁ NUESTROS PROGRAMAS
+                        <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="12" x2="20" y2="12"/>
+                            <polyline points="14 6 20 12 14 18"/>
+                        </svg>
+                    </a>
                 </div>
                 <div className="cultivarPlusImagen">
                 </div>
@@ -42,7 +47,12 @@ export default function CultivarPlusBayer() {
                     con el medio ambiente, contribuyendo a la seguridad alimentaria global y al bienestar 
                     de las comunidades agrícolas.
                 </p>
-                    <a className='conoceMasLink' href="https://www.cropscience.bayer.com.ar/soluciones-maiz">TODO SOBRE BAYER</a>
+                    <a className='conoceMasLink' href="https://www.cropscience.bayer.com.ar/soluciones-maiz">TODO SOBRE BAYER
+                        <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="12" x2="20" y2="12"/>
+                            <polyline points="14 6 20 12 14 18"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
