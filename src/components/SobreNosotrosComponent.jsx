@@ -8,7 +8,7 @@ export default function SobreNosotros() {
         <div className="sobreNosotrosComponent">
             
             <div className="sobreNosotrosBanner">
-                <h1 className='sobreNosotrosTitulo'>SOBRE NOSOTROS</h1>
+                <h1 className='contactoBannerTitulo'>SOBRE NOSOTROS</h1>
             </div>
 
             <div className="nuestraHisotira">
