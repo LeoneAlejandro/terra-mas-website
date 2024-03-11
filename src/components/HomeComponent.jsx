@@ -23,13 +23,16 @@ export default function HomeComponent() {
                     <br />
                     Asesorate con nuestros ingenieros sobre los mejores híbridos Dekalb para tu siembra,
                         y nuestra gran variedad de productos de protección de cultivos.
+                        <br />
+                        <br />
+                        <br />
                     </p>
-                    <a className='conoceMasLink' href="/sobre-nosotros">CONOCE MÁS SOBRE NOSOTROS
-                        <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    {/* <a className='conoceMasLink' href="/sobre-nosotros">CONOCE MÁS SOBRE NOSOTROS
+                        <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                             <line x1="4" y1="12" x2="20" y2="12"/>
                             <polyline points="14 6 20 12 14 18"/>
                         </svg>
-                    </a>
+                    </a> */}
 
                 </div>
                 <div className="sobreNosotrosImagen"></div>
@@ -38,9 +41,8 @@ export default function HomeComponent() {
             <div className="nuevasTecnologias">
                 <div className="nuevasTecnologiasImagen"></div>
                 <div className="nuevasTecnologiasTexto">
-                    {/* <h1 className='nuevasTecnologiasTitle'>TECNOLOGÍAS VTPRO4 y TRECEPTA</h1> */}
-                    <h3>TECNOLOGÍAS VTPRO4 y TRECEPTA</h3>
-                    {/* <p className='nuevasTecnologiasParagraph'> */}
+                    <h3>DEKALB: VANGUARDIA EN MAÍZ</h3>
+                    <h5>TECNOLOGÍAS VTPRO4 y TRECEPTA</h5>
                     <p>
                     El sistema <span style={{fontWeight: 'bold'}}> VTPRO4</span> es un concepto integral que 
                     combina la mejor genética con las más avanzadas tecnologías de protección de cultivo y 
@@ -53,7 +55,7 @@ export default function HomeComponent() {
                     Spodoptera frugiperda (Cogollero) y Diatraea saccharalis (Barrenador del tallo). 
                     </p>
                     <a className='conoceMasLink' href="https://www.dekalb.com.ar/es-ar/productos-maiz.html">CONSULTÁ TODAS NUESTRAS VARIEDADES
-                        <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                             <line x1="4" y1="12" x2="20" y2="12"/>
                             <polyline points="14 6 20 12 14 18"/>
                         </svg>

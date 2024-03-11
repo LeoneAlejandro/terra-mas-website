@@ -67,6 +67,7 @@ video {
     display: 1;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
 }
 
 
@@ -84,7 +85,7 @@ video {
 
     .nuevasTecnologiasImagen {
         width: 20%;
-        background-position: 0% 0px;
+        background-position: -10px 0%;
         background-image: url('../assets/nuevas_tecnologias_v.png');
     }
     

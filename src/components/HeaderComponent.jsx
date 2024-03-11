@@ -27,18 +27,14 @@ export default function HeaderComponent() {
     <header className={isScrolled ? 'header header-solid' : 'header'}>
         <nav className='navHeader'>
             <a href="/">
-                <div className="logo">
-                {/* <div className={isScrolled ? 'logo' : 'logo-monocr'}> */}
-                    <img src={isScrolled ? logo : logo_monocr} alt="Terra Mas Logo" />
-                </div>
+              <img className="logo" src={isScrolled ? logo : logo_monocr} alt="Terra Mas Logo" />
             </a>    
 
-            {/* <div className="left-buttons"> */}
             { isScrolled &&
               <div className='left-buttons'>
                   <ul>
                       <li><a className='headerContactButton' href="https://www.dekalb.com.ar/es-ar/productos-maiz.html">DEKALB</a></li>
-                      <li><a className='headerContactButton' href="https://www.cropscience.bayer.com.ar/soluciones-maiz">INSUMOS</a></li>
+                      <li><a className='headerContactButton' href="https://www.cropscience.bayer.com.ar/soluciones-maiz">BAYER</a></li>
                       <li><a className='headerContactButton' href="/contacto">CONTACTO</a></li>
                   </ul>
               </div>

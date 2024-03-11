@@ -14,17 +14,18 @@ export default function SobreNosotros() {
             <div className="nuestraHisotira">
                 <h3>Nuestra Historia</h3>
                 <p>
+                En Terra Mas nos dedicamos hace más de 20 años a brindar productos y servicios agropecuarios, 
+                siendo proveedores exclusivos de Bayer y Monsanto, para facilitar soluciones para tus cultivos.
 
+                Asesorate con nuestros ingenieros sobre los mejores híbridos Dekalb para tu siembra, 
+                y nuestra gran variedad de productos de protección de cultivos.
                 </p>
-
             </div>
 
             <div className="nuestrosProveedores">
                 <h3>Algunos de nuestros Proveedores</h3>
                 <p></p>
             </div>
-        
-            
         </div>
     )
 }

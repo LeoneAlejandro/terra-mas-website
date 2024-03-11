@@ -10,8 +10,8 @@ export default function CultivarPlusBayer() {
                     <h3>PROGRAMA CULTIVAR</h3>
                     {/* <p className="cultivarPlusParagraph"> */}
                     <p>
-                        <span style={{fontWeight: 'bold'}}> CULTIVAR</span> es el programa más <span style={{fontWeight: 'bold'}}> COMPLETO</span> y <span style={{fontWeight: 'bold'}}> EXCLUSIVO</span> del mercado. 
-                        El objetivo del programa es brindarle <span style={{fontWeight: 'bold'}}> SEGURIDAD</span> al productor, 
+                        Al ser cliente DEKALB podés formar parte de<span style={{fontWeight: 'bold'}}> CULTIVAR</span>, el programa más <span style={{fontWeight: 'bold'}}> COMPLETO</span> y <span style={{fontWeight: 'bold'}}> EXCLUSIVO</span> del mercado. 
+                        El objetivo del programa es brindarle seguridad al productor, 
                         ofreciéndole una garantía de resiembra de semillas de maíz DEKALB 
                         ante eventos como granizo, encharcamiento o helada en el caso de la región templada. 
                         <br />
@@ -19,7 +19,7 @@ export default function CultivarPlusBayer() {
                         Conocé más sobre nuestros planes <span style={{fontWeight: 'bold'}}> Cultivar</span> y <span style={{fontWeight: 'bold'}}> Cultivar Plus</span>, y como participar en ellos.
                     </p>
                     <a className='conoceMasLink' href="https://www.dekalb.com.ar/es-ar/programa-cultivar.html">CONSULTÁ NUESTROS PROGRAMAS
-                        <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                             <line x1="4" y1="12" x2="20" y2="12"/>
                             <polyline points="14 6 20 12 14 18"/>
                         </svg>
@@ -43,12 +43,12 @@ export default function CultivarPlusBayer() {
                     cartera de Bayer aborda desafíos específicos, asegurando cosechas saludables. 
                     <br />
                     <br />
-                    Comprometidos con la sostenibilidad, Bayer fomenta prácticas agrícolas respetuosas 
+                    Comprometidos con la sustenibilidad, Bayer fomenta prácticas agrícolas respetuosas 
                     con el medio ambiente, contribuyendo a la seguridad alimentaria global y al bienestar 
                     de las comunidades agrícolas.
                 </p>
                     <a className='conoceMasLink' href="https://www.cropscience.bayer.com.ar/soluciones-maiz">TODO SOBRE BAYER
-                        <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                             <line x1="4" y1="12" x2="20" y2="12"/>
                             <polyline points="14 6 20 12 14 18"/>
                         </svg>
