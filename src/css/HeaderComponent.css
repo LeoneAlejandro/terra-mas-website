@@ -13,7 +13,6 @@
 }
 
 .logo {
-
     width: 7vw;
 }
 
@@ -48,20 +47,6 @@ nav a {
     
 }
 
-
-.left-buttons ul,
-.right-buttons ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-}
-
-.left-buttons li {
-    padding-right: 1vw;
-}
-
 .left-buttons {
     padding-left: 1vw;
     display: flex;
@@ -71,6 +56,17 @@ nav a {
     transition: opacity 0.5s ease;
 }
 
+.left-buttons ul,
+.right-buttons ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    align-items: center;
+}
+
+.left-buttons li {
+    padding-right: 1vw;
+}
 
 .right-buttons {
     margin-left: auto;
@@ -89,4 +85,23 @@ nav a {
 }
 
 
+@media (min-width: 0px) and (max-width: 640px) { 
+    
+    .header-solid, .navHeader {
+        height: 15vw;
+    }
 
+    .headerLoginButton,
+    .headerContactButton{
+        font-size: 4.2vw ;
+    }
+
+    .logo {
+        width: 15vw;
+    }
+
+    .instagram-logo {
+        height: 5vw;
+    }
+    
+}
