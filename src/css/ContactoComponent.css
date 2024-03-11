@@ -24,6 +24,7 @@
 .listaContactosTerraMas {
     width: 80%;
     display: 1;
+    padding-bottom: 2vw;
 }
 
 .contactosGoogleMap {
@@ -37,6 +38,8 @@
     /* background-color: red; */
     padding-left: 2vw;
     margin-top: -1vw;
+    color: gray;
+    font-size: 1.15vw;
 }
 
 

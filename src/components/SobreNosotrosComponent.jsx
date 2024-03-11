@@ -16,7 +16,8 @@ export default function SobreNosotros() {
                 <p>
                 En Terra Mas nos dedicamos hace más de 20 años a brindar productos y servicios agropecuarios, 
                 siendo proveedores exclusivos de Bayer y Monsanto, para facilitar soluciones para tus cultivos.
-
+                <br />
+                <br />
                 Asesorate con nuestros ingenieros sobre los mejores híbridos Dekalb para tu siembra, 
                 y nuestra gran variedad de productos de protección de cultivos.
                 </p>

@@ -11,6 +11,9 @@ code {
     monospace;
 }
 
+li {
+  list-style: none;
+}
 
 h1 {
   margin: 0;
@@ -60,16 +63,6 @@ h5 {
   color: green;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(122, 121, 121);
-  display: inline-block;
-}
-
-a:hover {
-  color: green;
-}
-
 p {
   text-align: left;
   padding-left: 3vw;
@@ -80,6 +73,18 @@ p {
   font-size: 1.1vw;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
+}
+
+
+a {
+  text-decoration: none;
+  color: rgb(122, 121, 121);
+  /* display: inline-block; */
+  
+}
+
+a:hover {
+  color: green;
 }
 
 .conoceMasLink {
