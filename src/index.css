@@ -25,12 +25,25 @@ h1 {
   padding-bottom: 1vw;
 }
 
+h2 {
+  line-height: 1.3;
+  padding-left: 2vw;
+  padding-top: 1vw;
+  margin-bottom: 0.7vw;
+  font-size: 2vw;
+  /* font-size: 2.2em; */
+  text-align: left;
+  color: green;
+  font-family: 'Poppins', sans-serif;
+}
+
 h3 {
   line-height: 1.3;
   padding-left: 3vw;
   padding-top: 1vw;
   margin-bottom: 0.7vw;
   font-size: 2.3vw;
+  /* font-size: 2.2em; */
   text-align: left;
   color: green;
   font-family: 'Poppins', sans-serif;
@@ -38,15 +51,15 @@ h3 {
 
 h4 {
   text-align: left;
-  font-size: 1.3vw;
+  /* font-size: 1.3vw; */
   font-weight: bold;
   margin: 0;
   color: green;
-  margin-left: -0.5vw;
+  /* margin-left: -0.5vw; */
 }
 
 a {
-  font-size: 1.1vw;
+  /* font-size: 1.1vw; */
   text-decoration: none;
   color: rgb(122, 121, 121);
   display: inline-block;
@@ -66,6 +79,7 @@ p {
   font-weight: 450;
   font-family: 'Poppins', sans-serif;
   font-size: 1.1vw;
+  /* font-size: 0.8em; */
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
 }
@@ -92,8 +106,8 @@ p {
 
 .arrowSvg {
   margin-left: 0.5vw;
-  height: 24px;
-  width: 24px;
+  height: 1.8vw;
+  width: 1.8vw;
   /* width="24" height="24" */
   /* fill="none" stroke="#000" stroke-width="2"  */
   fill: none;
@@ -105,3 +119,36 @@ p {
   stroke: gray; /* Set the desired color when hovered */
 }
 
+@media (min-width: 0) and (max-width: 640px) { 
+
+
+
+  h3, h2, h1 {
+    font-size: 5vw;
+  }
+
+  .arrowSvg {
+    height: 4vw;
+    width: 4vw;
+  }
+
+  p, .conoceMasLink {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 1700px) { 
+
+  h3, h2, h1 {
+    font-size: 30px;
+  }
+
+  .arrowSvg {
+    height: 24px;
+    width: 24px;
+  }
+
+  p, .conoceMasLink {
+    font-size: 17px;
+  }
+}

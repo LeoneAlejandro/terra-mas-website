@@ -9,18 +9,22 @@
     width: 100%;
 } */
 
+.homeComponent {
+    /* font-size: 20px; */
+}
 
 .video {
     z-index: -1;
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: 45vw;
+    /* height: 100vh; */
 }
 
 video {
     width: 100%;
-    height: 100%;
+    height: 45vw;
     object-fit: fill;
     position: relative;
     top: 0;
@@ -54,6 +58,7 @@ video {
 .nuevasTecnologiasTexto {
     display: 1;
     width: 50%;
+    /* font-size: 20px; */
 }
 
 .nuevasTecnologiasImagen {
@@ -65,7 +70,7 @@ video {
 }
 
 
-@media (min-width: 600px) and (max-width: 940px) {
+@media (min-width: 640px) and (max-width: 1200px) {
 
     .sobreNosotrosTexto,
     .nuevasTecnologiasTexto {
@@ -86,7 +91,7 @@ video {
 }
 
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 640px) {
 
     .sobreNosotros {
         display: flex;

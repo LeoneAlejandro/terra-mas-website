@@ -6,7 +6,25 @@ export default function UbicationComponent() {
         <div className="ubicacionComponent">
             <div className="ubicacionIzquierda">
                 <div className="ubicationText">
-                    <h2 className='ubicacionTitle'>Contactanos</h2>
+                    {/* <h2 className='ubicacionTitle'>Contactanos</h2> */}
+                    <h2>Contactanos</h2>
+                        <p>
+                            <h4>Administración</h4>
+                            <a  href="mailto:administracion@terramas.com.ar">administracion@terramas.com.ar</a>
+                            <br />+54 9 2477-433335
+                            <h4 >Logísitica</h4>
+                            <a  href="mailto:logistica@terramas.com.ar">logistica@terramas.com.ar</a>
+                            <br />+54 9 2477-662610
+                            <h4 >Ventas</h4>
+                            <a  href="mailto:ventas@terramas.com.ar">ventas@terramas.com.ar</a><br />
+                            <a  href="mailto:gonzalomartin@terramas.com.ar">gonzalomartin@terramas.com.ar</a>
+                            <br />+54 9 2477-468564
+                            <h4 >Ubicación</h4>
+                            <a href="/contacto">Av Venini Sur 57, Pergamino, Buenos Aires</a>
+                        </p>
+                        
+{/*                         
+                        
                         <h4 >Administración</h4>
                         <a  href="mailto:administracion@terramas.com.ar">administracion@terramas.com.ar</a>
                         <br />+54 9 2477-433335
@@ -18,7 +36,7 @@ export default function UbicationComponent() {
                         <a  href="mailto:gonzalomartin@terramas.com.ar">gonzalomartin@terramas.com.ar</a>
                         <br />+54 9 2477-468564
                         <h4 >Ubicación</h4>
-                        <a href="/contacto">Av Venini Sur 57, Pergamino, Buenos Aires</a>
+                        <a href="/contacto">Av Venini Sur 57, Pergamino, Buenos Aires</a> */}
                 </div>
 
                 {/* <p className="ubicationText">

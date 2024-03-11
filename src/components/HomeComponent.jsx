@@ -5,20 +5,16 @@ export default function HomeComponent() {
     return(
         <div className="homeComponent">
 
-            {/* <div className='contenido'></div> */}
             <div className="video">
                 <video  loop autoPlay muted>
                     <source src={require('../assets/videos/dekalbRinde.mp4')} type="video/mp4" /> 
-                    {/* <source src={require('../assets/videos/dekalbVideo1080.mp4')} type="video/mp4" />  */}
                     Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
             </div>
 
             <div className='sobreNosotros'>
                 <div className="sobreNosotrosTexto">
-                    {/* <h1 className='sobreNosotrosTitle'>SOBRE NOSOTROS</h1> */}
                     <h3>SOBRE NOSOTROS</h3>
-                    {/* <p className='sobreNosotrosParagraph'> */}
                     <p>
                     En Terra Mas nos dedicamos hace más de 20 años a 
                     brindar productos y servicios agropecuarios, siendo proveedores exclusivos de Bayer y 
@@ -28,7 +24,7 @@ export default function HomeComponent() {
                     Asesorate con nuestros ingenieros sobre los mejores híbridos Dekalb para tu siembra,
                         y nuestra gran variedad de productos de protección de cultivos.
                     </p>
-                    <a className='conoceMasLink' href="">CONOCE MÁS SOBRE NOSOTROS
+                    <a className='conoceMasLink' href="/sobre-nosotros">CONOCE MÁS SOBRE NOSOTROS
                         <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="4" y1="12" x2="20" y2="12"/>
                             <polyline points="14 6 20 12 14 18"/>

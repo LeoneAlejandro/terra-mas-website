@@ -8,6 +8,7 @@ import CultivarPlusBayer from './CultivarPlusBayer'
 import ContactoComponent from './ContactoComponent'
 import '../css/TerraMasSiteApp.css'
 import LoginComponent from './LoginComponent'
+import SobreNosotros from './SobreNosotrosComponent'
 
 export default function TerraMasSiteApp() {
 
@@ -39,7 +40,12 @@ export default function TerraMasSiteApp() {
 
                     <Route path='/login' element={<LoginComponent/>}></Route>
 
-                    <Route path='/sobre-nosotros' element={<LoginComponent/>}></Route>
+                    <Route path='/sobre-nosotros' element={<>
+                            <SobreNosotros/>
+                            <UbicationComponent />
+                    </>
+                            
+                        }></Route>
 
                 </Routes>
 

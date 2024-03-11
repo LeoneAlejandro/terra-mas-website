@@ -15,18 +15,18 @@
 }
 
 
-.ubicacionImagen {
+/* .ubicacionImagen {
     background-image: url('../assets/ubicacion.png');
     width: 50%;
     display: 1;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-}
+} */
 
 .ubicationText {
     text-align: left;
-    padding-left: 4vw;
+    padding-left: 1vw;
     padding-right: 1vw;
     padding-bottom: 1.5vw;
     color: rgb(122, 121, 121);
@@ -35,7 +35,7 @@
     font-size: 1.1vw;
 }
 
-.ubicacionTitle {
+/* .ubicacionTitle {
     padding-top: 1.2vw;
     padding-bottom: 0.5vw;
     margin: 0;
@@ -44,8 +44,41 @@
     font-family: 'Poppins', sans-serif;
     font-size: 2.3vw;
     margin-left: -1vw;
-}
+} */
 
 .contactanosLine:hover {
     color: green;
+}
+
+@media (min-width: 0px) and (max-width: 640px) { 
+
+    .ubicacionComponent {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+
+    .googleMapTM {
+        width: 100%;
+        height: 30vw;
+    }
+
+    .ubicacionIzquierda {
+        width: 100%;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1200px) { 
+
+    .googleMapTM {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1700px) { 
+    
+    .ubicacionTitle {
+        font-size: 45px;
+    }
+    
 }

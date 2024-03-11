@@ -12,7 +12,8 @@
     margin-top: 1vw;
 }
 
-.formButton:active {
+.formButton:active,
+.ghost:active {
 	transform: scale(0.95);
 }
 

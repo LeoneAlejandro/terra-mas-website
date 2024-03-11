@@ -39,7 +39,8 @@
 }
 
 
-@media (min-width: 37.5em) and (max-width: 75em) {
+/* @media (min-width: 37.5em) and (max-width: 75em) { */
+@media (min-width: 640px) and (max-width: 1200px) {
 
     .cultivarPlusTexto,
     .bayerInsumosTexto {
@@ -58,4 +59,38 @@
         background-position: center center;
     }
     
+}
+
+@media (min-width: 0px) and (max-width: 640px) {
+
+    .cultivarPlus {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: white;
+    }
+
+    .cultivarPlusImagen {
+        width: 100%;
+        height: 20vw;
+        background-position: center center;
+        background-image: url('../assets/programa_cultivar_line.jpg');
+    }
+
+    .bayerInsumos {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+
+    .cultivarPlusTexto,
+    .bayerInsumosTexto {
+        width: 100%;
+    }
+
+    .bayerInsumosImagen {
+        width: 100%;
+        height: 20vw;
+        background-position: center center;
+        background-image: url('../assets/bayer_banner_line.png');
+    }
 }
