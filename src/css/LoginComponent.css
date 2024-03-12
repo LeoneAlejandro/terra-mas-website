@@ -37,8 +37,9 @@
 
 
 .loginComponent {
-    max-height: 27.2vw;
-    padding-top: 5vw;
+	height: 100%; 
+	/* VEEEEEEEEEEEEEEEEEEEEER */
+	padding-top: 7vw;
     padding-left: 20%;
     padding-bottom: 10vw;
     background-image: url('../assets/corn-field-back.png');

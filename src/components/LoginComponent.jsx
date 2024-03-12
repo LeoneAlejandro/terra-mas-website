@@ -13,10 +13,12 @@ export default function LoginComponent() {
         setIsSignUpActive(false);
     };
 
+    
+
 
     return(
         <div className="loginComponent">
-
+            
             <div className={`container ${isSignUpActive ? 'right-panel-active' : ''}`}>
                     <div className="form-container sign-up-container">
                         <form action="#">
