@@ -9,6 +9,7 @@ import ContactoComponent from './ContactoComponent'
 import '../css/TerraMasSiteApp.css'
 import LoginComponent from './LoginComponent'
 import SobreNosotros from './SobreNosotrosComponent'
+import MessageusComponent from './MessageusComponent'
 
 export default function TerraMasSiteApp() {
 
@@ -41,6 +42,7 @@ export default function TerraMasSiteApp() {
                     <Route path='/login' element={<LoginComponent/>}></Route>
 
                     <Route path='/sobre-nosotros' element={<>
+                            <MessageusComponent/>
                             <SobreNosotros/>
                             <UbicationComponent />
                     </>

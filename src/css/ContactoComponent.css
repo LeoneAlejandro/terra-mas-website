@@ -22,25 +22,23 @@
 }
 
 .listaContactosTerraMas {
-    width: 80%;
+    width: 60%;
     display: 1;
     padding-bottom: 2vw;
 }
 
 .contactosGoogleMap {
     width: 50%;
-    /* height: 300; */
     border: 1.5vw solid white;
     display: 1;
 }
 
-.contactanosText {
-    /* background-color: red; */
+/* .contactanosText {
     padding-left: 2vw;
     margin-top: -1vw;
     color: gray;
     font-size: 1.15vw;
-}
+} */
 
 
 

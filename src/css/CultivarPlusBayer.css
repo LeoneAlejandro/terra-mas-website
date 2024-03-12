@@ -3,7 +3,7 @@
     background-color: white;
 }
 
-.cultivarPlusTexto {
+.cultivarPlusIzquierda {
     width: 50%;
     display: 1;
 }
@@ -33,7 +33,7 @@
     display: 1;
 }
 
-.bayerInsumosTexto {
+.bayerInsumosDerecha {
     width: 50%;
     display: 1;
 }
@@ -42,8 +42,8 @@
 /* @media (min-width: 37.5em) and (max-width: 75em) { */
 @media (min-width: 640px) and (max-width: 1200px) {
 
-    .cultivarPlusTexto,
-    .bayerInsumosTexto {
+    .cultivarPlusIzquierda,
+    .bayerInsumosDerecha {
         width: 80%;
     }
     
@@ -82,8 +82,8 @@
         background-color: white;
     }
 
-    .cultivarPlusTexto,
-    .bayerInsumosTexto {
+    .cultivarPlusIzquierda,
+    .bayerInsumosDerecha {
         width: 100%;
     }
 
