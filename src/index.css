@@ -15,6 +15,10 @@ li {
   list-style: none;
 }
 
+ul {
+  padding-left: 2vw;
+}
+
 h1 {
   margin: 0;
   padding-top: 2vw;
@@ -80,7 +84,6 @@ a {
   text-decoration: none;
   color: rgb(122, 121, 121);
   /* display: inline-block; */
-  
 }
 
 a:hover {
@@ -131,7 +134,7 @@ a:hover {
     width: 4vw;
   }
 
-  p, h4, .conoceMasLink {
+  p, h4, .conoceMasLink, h5, a {
     font-size: 3vw;
   }
 }
@@ -151,7 +154,8 @@ a:hover {
     width: 24px;
   }
 
-  p, h4, .conoceMasLink {
+  p, h4, .conoceMasLink, a {
     font-size: 17px;
   }
+
 }
