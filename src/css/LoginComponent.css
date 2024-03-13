@@ -49,6 +49,7 @@
 }
 
 form {
+	margin-top: -1vw;
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;

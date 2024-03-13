@@ -1,5 +1,4 @@
-import '../css/ContactoComponent.css'
-
+import '../css/ContactoComponent.css'   
 
 export default function ContactoComponent() {
 
