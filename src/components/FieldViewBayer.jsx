@@ -1,4 +1,4 @@
-import '../css/CultivarPlusBayer.css'
+import '../css/FieldViewBayer.css'
 
 export default function CultivarPlusBayer() {
 
@@ -7,18 +7,18 @@ export default function CultivarPlusBayer() {
             <div className="cultivarPlus">
                 <div className="cultivarPlusIzquierda">
                     <div className="containerText">
-                        <h3>PROGRAMA CULTIVAR</h3>
-                        <h5>SEGURIDAD Y PROTECCION PARA TUS CULTIVOS</h5>
+                        <h3>FIELDVIEW</h3>
+                        <h5>Plataforma líder en agricultura digital</h5>
                         <p>
-                            Al ser cliente DEKALB podés formar parte de <b>CULTIVAR</b>, el programa más <b>COMPLETO</b> y <b>EXCLUSIVO</b> del mercado. 
-                            El objetivo del programa es brindarle seguridad al productor, 
-                            ofreciéndole una garantía de resiembra de semillas de maíz DEKALB 
-                            ante eventos como granizo, encharcamiento o helada en el caso de la región templada. 
+                        Cada campo es distinto, cada lote es distinto. Usando FieldView™ durante toda 
+                        la campaña vas a poder tomar decisiones basadas en tus datos, logrando así maximizar 
+                        el rendimiento en cada hectárea haciendo un uso más eficiente de cada uno de tus 
+                        recursos. 
                         </p>
                         <p>
-                            Conocé más sobre nuestros planes <b>Cultivar</b> y <b>Cultivar Plus</b>, y como participar en ellos.
+                        Desde la presiembra hasta la poscosecha, FieldView te acompaña para que puedas achicar todas las brechas que merman el rendimiento.
                         </p>
-                        <a className='conoceMasLink' href="https://www.dekalb.com.ar/es-ar/programa-cultivar.html">CONSULTÁ NUESTROS PROGRAMAS
+                        <a className='conoceMasLink' href="https://climatefieldview.com.ar/?hsLang=en">CONSULTÁ NUESTROS COMBOS FIELDVIEW
                             <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="4" y1="12" x2="20" y2="12"/>
                                 <polyline points="14 6 20 12 14 18"/>

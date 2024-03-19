@@ -61,6 +61,7 @@ video {
     display: 1;
     width: 50%;
     /* font-size: 20px; */
+    margin-bottom: 3vw;
 }
 
 .containerText {

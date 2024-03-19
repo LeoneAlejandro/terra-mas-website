@@ -1,0 +1,8 @@
+.hahCard {
+    display: flex;
+}
+
+.cardConentido, .cardImagen {
+    width: 50%;
+    display: 1;
+}

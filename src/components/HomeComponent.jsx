@@ -57,7 +57,7 @@ export default function HomeComponent() {
                             que afectan el cultivo de maíz. Trecepta presenta un efectivo control contra 
                             Spodoptera frugiperda (Cogollero) y Diatraea saccharalis (Barrenador del tallo). 
                         </p>
-                        <a className='conoceMasLink' href="https://www.dekalb.com.ar/es-ar/productos-maiz.html">CONSULTÁ TODAS NUESTRAS VARIEDADES
+                        <a className='conoceMasLink' href="https://www.agro.bayer.com.ar/dekalb/catalogo">CONSULTÁ TODAS NUESTRAS VARIEDADES
                             <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="4" y1="12" x2="20" y2="12"/>
                                 <polyline points="14 6 20 12 14 18"/>

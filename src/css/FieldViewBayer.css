@@ -6,11 +6,12 @@
 .cultivarPlusIzquierda {
     width: 50%;
     display: 1;
+    margin-bottom: 3vw;
 }
 
 
 .cultivarPlusImagen {
-    background-image: url('../assets/programa_cultivar_h.png');
+    background-image: url('../assets/FieldView_h.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -36,6 +37,7 @@
 .bayerInsumosDerecha {
     width: 50%;
     display: 1;
+    margin-bottom: 3vw;
 }
 
 
@@ -50,7 +52,7 @@
     .cultivarPlusImagen {
         width: 20%;
         background-position: center center;
-        background-image: url('../assets/programa_cultivar_v.png');
+        background-image: url('../assets/FieldView_v.jpg');
     }
 
     .bayerInsumosImagen {
@@ -73,7 +75,7 @@
         width: 100%;
         height: 20vw;
         background-position: center center;
-        background-image: url('../assets/programa_cultivar_line.jpg');
+        background-image: url('../assets/FieldView_banner.png');
     }
 
     .bayerInsumos {

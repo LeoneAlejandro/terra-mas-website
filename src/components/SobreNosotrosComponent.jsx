@@ -5,7 +5,7 @@ export default function SobreNosotros() {
     return(
 
         <div className="sobreNosotrosComponent">
-            
+
             <div className="sobreNosotrosBanner">
                 <h1 className='contactoBannerTitulo'>SOBRE NOSOTROS</h1>
             </div>
