@@ -1,9 +1,45 @@
 import '../css/LoginComponent.css'
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from './security/AuthContext';
 
 export default function LoginComponent() {
 
+    const [loginEmail, setLoginEmail] = useState('')
+    const [loginPassword, setLoginPassword] = useState('')
+    const [singupName, setSingupName] = useState('')
+    const [singupEmail, setSingupEmail] = useState('')
+    const [singupPassword, setSingupPassword] = useState('')
+    const [showErrorMessage, setShowErrorMessage] = useState(false)
     const [isSignUpActive, setIsSignUpActive] = useState(false);
+
+    const authContext = useAuth();
+
+    function handleUsernameChange(event) {
+        setLoginEmail(event.target.value)
+    }
+
+    function handlePasswordChange(event) {
+        setLoginPassword(event.target.value)
+    }
+
+    async function handleSubmit(){
+        if(await authContext.login(loginEmail, loginPassword)) {
+            navigate(`/`)
+        } else {
+            console.log("algo anda mal")
+            setShowErrorMessage(true)
+        }
+    }
+
+    async function handleRegister() {
+        if(await authContext.register(loginEmail, loginPassword)) {
+            navigate(`/`)
+        } else {
+            console.log("el registro fue incorrecto")
+            setShowErrorMessage(true)
+        }
+    }
 
     const handleSignUpClick = () => {
         setIsSignUpActive(true);
@@ -13,6 +49,7 @@ export default function LoginComponent() {
         setIsSignUpActive(false);
     };
 
+    const navigate = useNavigate();
     
 
 
@@ -23,32 +60,21 @@ export default function LoginComponent() {
                     <div className="form-container sign-up-container">
                         <form action="#">
                             <h1 className='loginIniciar'>Crear cuenta</h1>
-                            {/* <div class="social-container">
-                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                            </div> 
-                            <span>or use your email for registration</span>*/}
-                            <input type="text" placeholder="Nombre" />
-                            <input type="email" placeholder="Email" />
-                            <input type="password" placeholder="Contraseña" />
-                            <button className='formButton'>Crear cuenta</button>
+                            <input value={singupName} type="text" placeholder="Nombre" />
+                            <input value={singupEmail} type="email" placeholder="Email" />
+                            <input value={singupPassword} type="password" placeholder="Contraseña" />
+                            <button onClick={handleRegister} className='formButton' type='button'>Crear cuenta</button>
                         </form>
-                    </div>
+                    </div>  
 
                     <div className="form-container sign-in-container">
                         <form action="#">
                             <h1 className='loginIniciar'>Iniciar sesión</h1>
-                            {/* <div class="social-container">
-                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                            <span>or use your account</span> */}
-                            <input type="email" placeholder="Email" />
-                            <input type="password" placeholder="Password" />
+                            <input value={loginEmail} onChange={handleUsernameChange} type="email" placeholder="Email" />
+                            <input value={loginPassword} onChange={handlePasswordChange} type="password" placeholder="Password" />
+                            {showErrorMessage && <div className="errorMessage">Usuario o contraseña incorrectos</div>}
                             <a className='loginA' href="#">olvidaste tu contraseña ?</a>
-                            <button className='formButton'>Ingresar</button>
+                            <button onClick={handleSubmit} className='formButton' type='button'>Ingresar</button>
                         </form>
                     </div>
 
