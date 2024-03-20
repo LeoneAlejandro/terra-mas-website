@@ -7,7 +7,8 @@ export default function LoginComponent() {
 
     const [loginEmail, setLoginEmail] = useState('')
     const [loginPassword, setLoginPassword] = useState('')
-    const [singupName, setSingupName] = useState('')
+    const [singupFirstName, setSingupFirstName] = useState('')
+    const [singupLastName, setSingupLastName] = useState('')
     const [singupEmail, setSingupEmail] = useState('')
     const [singupPassword, setSingupPassword] = useState('')
     const [showErrorMessage, setShowErrorMessage] = useState(false)
@@ -23,6 +24,22 @@ export default function LoginComponent() {
         setLoginPassword(event.target.value)
     }
 
+    function handleRegFirstNameChange(event) {
+        setSingupFirstName(event.target.value)
+    }
+
+    function handleRegLastNameChange(event) {
+        setSingupLastName(event.target.value)
+    }
+
+    function handleRegUsernameChange(event) {
+        setSingupEmail(event.target.value)
+    }
+
+    function handleRegPasswordChange(event) {
+        setSingupPassword(event.target.value)
+    }
+
     async function handleSubmit(){
         if(await authContext.login(loginEmail, loginPassword)) {
             navigate(`/`)
@@ -33,7 +50,7 @@ export default function LoginComponent() {
     }
 
     async function handleRegister() {
-        if(await authContext.register(loginEmail, loginPassword)) {
+        if(await authContext.register(singupFirstName, singupLastName, singupEmail, singupPassword)) {
             navigate(`/`)
         } else {
             console.log("el registro fue incorrecto")
@@ -51,8 +68,6 @@ export default function LoginComponent() {
 
     const navigate = useNavigate();
     
-
-
     return(
         <div className="loginComponent">
             
@@ -60,9 +75,10 @@ export default function LoginComponent() {
                     <div className="form-container sign-up-container">
                         <form action="#">
                             <h1 className='loginIniciar'>Crear cuenta</h1>
-                            <input value={singupName} type="text" placeholder="Nombre" />
-                            <input value={singupEmail} type="email" placeholder="Email" />
-                            <input value={singupPassword} type="password" placeholder="Contraseña" />
+                            <input value={singupFirstName} onChange={handleRegFirstNameChange} type="text" placeholder="Nombre" />
+                            <input value={singupLastName} onChange={handleRegLastNameChange} type="text" placeholder="Apellido" />
+                            <input value={singupEmail} onChange={handleRegUsernameChange} type="email" placeholder="Email" />
+                            <input value={singupPassword} onChange={handleRegPasswordChange} type="password" placeholder="Contraseña" />
                             <button onClick={handleRegister} className='formButton' type='button'>Crear cuenta</button>
                         </form>
                     </div>  

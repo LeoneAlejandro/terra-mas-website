@@ -55,7 +55,6 @@ nav a {
     margin-right: 0;
     border-radius: 0.2vw;
     color: white;
-    
 }
 
 .headerContactButton:hover,
@@ -104,3 +103,74 @@ nav a {
     }
     
 }
+
+.ddmMenu {
+    /* width: 100%; */
+    /* align-items: start; */
+    /* height: 100%; */
+}
+
+.ddmButton {
+    margin-top: 0.4vw;
+    min-width: 10vw;
+    font-family: 'Poppins';
+    border: none;
+    border-radius:  0.3vw 0.3vw 0px 0px;
+    /* border-top-left-radius: 0.2vw;
+    border-top-right-radius: 0.2vw; */
+    font-size: 1.4vw;
+    padding: 0.5vw;
+    color: white;
+    background-color: transparent;
+}
+
+.ddmButton:hover {
+    color: gray;
+    background-color: white;
+}
+
+.dropdownActive {
+    color: gray;
+    background-color: white;
+}
+
+.ddmLi:hover .ddmButton {
+    color: gray;
+    background-color: white;
+}
+
+.ddmUl {
+    width: 100%;
+    /* top: 0vw; */
+    position: absolute;
+    /* display: flex; */
+    flex-direction: column;
+    /* align-items: center; */
+    /* list-style: none; */
+    /* padding: unset; */
+    /* margin: unset; */
+    transition: all linear 1s;
+}
+
+.ddmUl li:last-child {border-radius:  0px 0px 0.3vw 0.3vw !important;}
+
+.ddmLi {
+    padding: 0.5vw;
+    background-color: white;
+}
+
+.ddmLi:hover {
+    background: gray;
+    cursor: pointer;
+    color: #fff;
+}
+
+.dropdown-menu {
+    position: relative;
+    /* transition: ease-in-out 2s; */
+    border-radius: 2vw;
+}
+
+/* .ddmContainer {
+    height: 100%;
+} */
