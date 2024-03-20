@@ -47,7 +47,7 @@ nav a {
     align-items: center;
 }
 
-.headerLoginButton,
+/* .headerLoginButton,
 .headerContactButton {
     font-size: 1.4vw;
     padding: 0.5vw;
@@ -61,7 +61,7 @@ nav a {
 .headerLoginButton:hover {
     color: gray;
     background-color: white;
-}
+} */
 
 .left-buttons ul,
 .right-buttons ul {
@@ -132,6 +132,7 @@ nav a {
 .dropdownActive {
     color: gray;
     background-color: white;
+    cursor: pointer;
 }
 
 .ddmLi:hover .ddmButton {
@@ -174,3 +175,22 @@ nav a {
 /* .ddmContainer {
     height: 100%;
 } */
+
+.ddmLink {
+    /* position: relative; */
+    padding: 0px;
+    margin: 0px;
+    /* width: 100%; */
+    height: 100%;
+    color: gray;
+    background-color: white;
+    padding: 0.5vw;
+}
+
+.ddmLink:hover {
+    background: gray;
+    cursor: pointer;
+    color: #fff;
+}
+
+.ddmLink:last-child {border-radius:  0px 0px 0.3vw 0.3vw !important;}

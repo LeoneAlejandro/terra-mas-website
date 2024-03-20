@@ -3,6 +3,7 @@ import logo from '../assets/LOGO_TERRAMAS sin letars PNG.png'
 import logo_monocr from '../assets/LOGO_TERRAMAS_monocrom.png'
 import React, { useState, useEffect } from 'react';
 import { useAuth } from './security/AuthContext'
+import { Link } from 'react-router-dom'
 
 export default function HeaderComponent() { 
 
@@ -53,17 +54,22 @@ export default function HeaderComponent() {
   return (
     <header className={isScrolled ? 'header header-solid' : 'header'}>
         <nav className='navHeader'>
-            <a href="/">
-              <img className="logo" src={isScrolled ? logo : logo_monocr} alt="Terra Mas Logo" />
-            </a>    
+            {/* <a> */}
+              <Link to="/">
+                <img className="logo" src={isScrolled ? logo : logo_monocr} alt="Terra Mas Logo" />
+              </Link>
+            {/* </a>     */}
 
             { isScrolled &&
               <div className='left-buttons'>
                   <ul>
-                      <li><a className='headerContactButton' href="https://www.dekalb.com.ar/es-ar/productos-maiz.html">DEKALB</a></li>
-                      <li><a className='headerContactButton' href="https://www.cropscience.bayer.com.ar/soluciones-maiz">BAYER</a></li>
-                      <li><a className='headerContactButton' href="/contacto">CONTACTO</a></li>
-                      <li><a className='headerContactButton' onClick={viewUserRole}>USERROLE</a></li>
+                    <li><Link className='linkHeader' to="https://www.dekalb.com.ar/es-ar/productos-maiz.html">DEKALB</Link></li>
+                    <li><Link className='linkHeader' to="https://www.cropscience.bayer.com.ar/soluciones-maiz">BAYER</Link></li>
+                    <li><Link className='linkHeader' to="/contacto">CONTACTO</Link></li>
+                    {/* <li><a className='headerContactButton' href="https://www.dekalb.com.ar/es-ar/productos-maiz.html">DEKALB</a></li> */}
+                    {/* <li><a className='headerContactButton' href="https://www.cropscience.bayer.com.ar/soluciones-maiz">BAYER</a></li> */}
+                    {/* <li><a className='headerContactButton' href="/contacto">CONTACTO</a></li> */}
+                    {/* <li><a className='headerContactButton' onClick={viewUserRole}>USERROLE</a></li> */}
                   </ul>
               </div>
             }
@@ -76,14 +82,37 @@ export default function HeaderComponent() {
                       </svg>
                     </a>
 
-                  <li>
-                    {!isAuthenticated &&<a className='headerLoginButton' href="/login">LOGIN</a>}
+                {!isAuthenticated && <li><Link className='linkHeader' to="/login">LOGIN</Link></li>}
+
+                  {/* <li>
+                    {!isAuthenticated &&
+                    <a className='headerLoginButton' href="/login">LOGIN</a>
+                    }
                   
-                  </li>
+                  </li> */}
+
+                { isAuthenticated &&
                   <li>
-                      { isAuthenticated && 
                       <div className="ddmMenu" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                        {/* <button className='ddmButton'>¡Hola, {logoutName}!</button> */}
+                        <button className={`ddmButton ${isDropdownVisible ? 'dropdownActive' : ''}`}>¡Hola, {logoutName}!</button>
+                        {isDropdownVisible && 
+                            <div className="dropdown-menu">
+                              <ul className="ddmUl">
+                                {isAdmin && <Link className="ddmLink">Stock</Link>}
+                                <Link className='ddmLink'>Mi Perfil</Link>
+                                <Link className='ddmLink' onClick={logout} to="/">Cerrar Sesión</Link>
+                              </ul>
+                          </div>                        
+                        }
+                      </div>
+                  </li>
+                }
+
+
+
+                {/* { isAuthenticated && 
+                  <li>
+                      <div className="ddmMenu" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <button className={`ddmButton ${isDropdownVisible ? 'dropdownActive' : ''}`}>¡Hola, {logoutName}!</button>
                         {isDropdownVisible && 
                             <div className="dropdown-menu">
@@ -94,9 +123,9 @@ export default function HeaderComponent() {
                               </ul>
                           </div>                        
                         }
-                      </div>}
-                      {/* {isAuthenticated && <a href="" className="headerLoginButton" onClick={logout}>¡Hola, {logoutName}!</a>} */}
+                      </div>
                   </li>
+                } */}
 
 
 

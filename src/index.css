@@ -133,7 +133,7 @@ a:hover {
     width: 4vw;
   }
 
-  p, h4, .conoceMasLink, h5, a {
+  p, h4, .conoceMasLink, h5, a, .linkHeader {
     font-size: 3vw;
   }
 }
@@ -153,8 +153,22 @@ a:hover {
     width: 24px;
   }
 
-  p, h4, .conoceMasLink, a {
+  p, h4, .conoceMasLink, a, .linkHeader {
     font-size: 17px;
   }
 
+}
+
+.linkHeader {
+  font-size: 1.4vw;
+  padding: 0.5vw;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0.2vw;
+  color: white;
+}
+
+.linkHeader:hover {
+  color: gray;
+  background-color: white;
 }
