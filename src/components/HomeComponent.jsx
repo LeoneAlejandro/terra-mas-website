@@ -4,6 +4,7 @@ export default function HomeComponent() {
 
     return(
         <div className="homeComponent">
+        
 
             <div className="video">
                 <video  loop autoPlay muted>
@@ -34,8 +35,6 @@ export default function HomeComponent() {
                                 <polyline points="14 6 20 12 14 18"/>
                             </svg>
                         </a> */}
-
-                        <br /><br />
                     </div>
                 </div>
                 <div className="sobreNosotrosImagen"></div>

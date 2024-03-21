@@ -47,21 +47,6 @@ nav a {
     align-items: center;
 }
 
-/* .headerLoginButton,
-.headerContactButton {
-    font-size: 1.4vw;
-    padding: 0.5vw;
-    margin-left: 0;
-    margin-right: 0;
-    border-radius: 0.2vw;
-    color: white;
-}
-
-.headerContactButton:hover,
-.headerLoginButton:hover {
-    color: gray;
-    background-color: white;
-} */
 
 .left-buttons ul,
 .right-buttons ul {
@@ -80,6 +65,79 @@ nav a {
 
 .instagram-logo:hover {
     fill: gray;
+}
+
+.ddmMenu {
+}
+
+.ddmButton {
+    min-width: 10vw;
+    font-family: 'Poppins';
+    border: none;
+    border-radius:  0.3vw 0.3vw 0px 0px;
+    font-size: 1.4vw;
+    padding: 0.5vw;
+    color: white;
+    background-color: transparent;
+}
+
+.ddmButton:hover {
+    color: gray;
+    background-color: white;
+}
+
+.dropdownActive {
+    color: gray;
+    background-color: white;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: relative;
+    border-radius: 2vw;
+}
+
+.ddmLi:hover .ddmButton {
+    color: gray;
+    background-color: white;
+}
+
+.ddmUl {
+    width: 100%;
+    position: absolute;
+    flex-direction: column;
+    transition: all linear 1s;
+}
+
+.ddmUl li:last-child {border-radius:  0px 0px 0.3vw 0.3vw !important;}
+
+.ddmLi {
+    padding: 0.5vw;
+    background-color: white;
+}
+
+.ddmLi:hover {
+    background: gray;
+    cursor: pointer;
+    color: #fff;
+}
+
+.ddmLink {
+    font-size: 1.3vw;
+    margin: 0px;
+    height: 100%;
+    color: gray;
+    background-color: white;
+    padding: 0.5vw;
+}
+
+.ddmLink:last-child {border-radius:  0px 0px 0.4vw 0.4vw !important;}
+
+
+.ddmLink:hover {
+    background: gray;
+    cursor: pointer;
+    color: #fff;
 }
 
 
@@ -101,96 +159,32 @@ nav a {
     .instagram-logo {
         height: 5vw;
     }
+
+    .ddmLink {
+        font-size: 2.5vw;
+    }
+
+    .ddmButton {
+        font-size: 4vw;
+    }
     
 }
 
-.ddmMenu {
-    /* width: 100%; */
-    /* align-items: start; */
-    /* height: 100%; */
+@media (min-width: 1700px) { 
+
+    .header, .navHeader {
+        height: 4vw;
+    }
+
+    .logo {
+        width: 5vw;
+    }
+
+    .instagram-logo {
+        height: 1.5vw;
+    }
+
+    .ddmLink, .ddmButton {
+        font-size: 1vw;
+    }
 }
-
-.ddmButton {
-    margin-top: 0.4vw;
-    min-width: 10vw;
-    font-family: 'Poppins';
-    border: none;
-    border-radius:  0.3vw 0.3vw 0px 0px;
-    /* border-top-left-radius: 0.2vw;
-    border-top-right-radius: 0.2vw; */
-    font-size: 1.4vw;
-    padding: 0.5vw;
-    color: white;
-    background-color: transparent;
-}
-
-.ddmButton:hover {
-    color: gray;
-    background-color: white;
-}
-
-.dropdownActive {
-    color: gray;
-    background-color: white;
-    cursor: pointer;
-}
-
-.ddmLi:hover .ddmButton {
-    color: gray;
-    background-color: white;
-}
-
-.ddmUl {
-    width: 100%;
-    /* top: 0vw; */
-    position: absolute;
-    /* display: flex; */
-    flex-direction: column;
-    /* align-items: center; */
-    /* list-style: none; */
-    /* padding: unset; */
-    /* margin: unset; */
-    transition: all linear 1s;
-}
-
-.ddmUl li:last-child {border-radius:  0px 0px 0.3vw 0.3vw !important;}
-
-.ddmLi {
-    padding: 0.5vw;
-    background-color: white;
-}
-
-.ddmLi:hover {
-    background: gray;
-    cursor: pointer;
-    color: #fff;
-}
-
-.dropdown-menu {
-    position: relative;
-    /* transition: ease-in-out 2s; */
-    border-radius: 2vw;
-}
-
-/* .ddmContainer {
-    height: 100%;
-} */
-
-.ddmLink {
-    /* position: relative; */
-    padding: 0px;
-    margin: 0px;
-    /* width: 100%; */
-    height: 100%;
-    color: gray;
-    background-color: white;
-    padding: 0.5vw;
-}
-
-.ddmLink:hover {
-    background: gray;
-    cursor: pointer;
-    color: #fff;
-}
-
-.ddmLink:last-child {border-radius:  0px 0px 0.3vw 0.3vw !important;}

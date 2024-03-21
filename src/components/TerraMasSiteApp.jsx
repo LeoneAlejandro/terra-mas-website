@@ -11,6 +11,7 @@ import LoginComponent from './LoginComponent'
 import SobreNosotros from './SobreNosotrosComponent'
 import AuthProvider, { useAuth } from './security/AuthContext'
 import '../css/TerraMasSiteApp.css'
+import ScrollToTop from './ScrollToTop'
 
 export default function TerraMasSiteApp() {
 
@@ -24,42 +25,34 @@ export default function TerraMasSiteApp() {
 
     return(
         <div className="TerraMasSiteApp">
-        <AuthProvider>
+            <AuthProvider>
+                <BrowserRouter>
+                    <ScrollToTop>
+                        <HeaderComponent/>
+                            <Routes>
 
-            <BrowserRouter>
-            
-                <HeaderComponent/>
+                                <Route path="/" element={<>
+                                        <HomeComponent />
+                                        <FieldViewBayer />
+                                        <UbicationComponent />
+                                    </>} />
 
-                    <Routes>
+                                <Route path='/contacto' element={<ContactoComponent/>} />
 
-                        <Route path="/" element={<>
-                                <HomeComponent />
-                                <FieldViewBayer />
-                                <UbicationComponent />
-                            </>} />
+                                <Route path='/login' element={<LoginComponent/>}></Route>
 
-                        <Route path='/contacto' element={<ContactoComponent/>} />
+                                <Route path='/sobre-nosotros' element={<>
+                                        <SobreNosotros/>
+                                        <UbicationComponent />
+                                </>
+                                        
+                                    }></Route>
 
-                        <Route path='/login' element={<LoginComponent/>}></Route>
-
-
-
-                        <Route path='/sobre-nosotros' element={<>
-                                <SobreNosotros/>
-                                <UbicationComponent />
-                        </>
-                                
-                            }></Route>
-
-                    </Routes>
-
-                <FooterComponent />
-            
-            </BrowserRouter>
-            
-        </AuthProvider>
-
-
+                            </Routes>
+                        <FooterComponent />
+                    </ScrollToTop>
+                </BrowserRouter>
+            </AuthProvider>
         </div>
     )
 }
