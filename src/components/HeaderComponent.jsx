@@ -1,8 +1,8 @@
 import '../css/HeaderComponent.css'
 import logo from '../assets/LOGO_TERRAMAS sin letars PNG.png'
 import logo_monocr from '../assets/LOGO_TERRAMAS_monocrom.png'
-import logoutImg from '../assets/logout.png'
-import closeButton from '../assets/close_icon.png'
+import logoutImg from '../assets/logout.jpg'
+import closeButton from '../assets/close_icon.jpg'
 import React, { useState, useEffect, useRef } from 'react';
 import { useAuth } from './security/AuthContext'
 import { Link } from 'react-router-dom'
@@ -32,7 +32,7 @@ export default function HeaderComponent() {
 
   function logout() {
     authContext.logout()
-    window.location.reload()
+    window.location.href = "/"
   }
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,7 +71,10 @@ export default function HeaderComponent() {
                   <img className='xButton' src={closeButton} alt="X" onClick={() => setShowPopup(false) }/>
                   <img src={logoutImg} alt="Imagen de deslogueo"/>
                   <p className='logoutP'>Estas por cerra sesión, estas seguro?</p>
-                  <button className='formButton' onClick={() => (setShowPopup(false), logout())}>Confirmar</button>
+                  <button className='formButton' onClick={() => (setShowPopup(false), logout())}>
+                    <span className='transition'></span>
+                    Confirmar
+                    </button>
                 </div>
             </div>
           }
@@ -83,7 +86,7 @@ export default function HeaderComponent() {
           { isScrolled &&
             <div className='left-buttons'>
                 <ul>
-                  <li><Link className='linkHeader' to="https://www.dekalb.com.ar/es-ar/productos-maiz.html">DEKALB</Link></li>
+                  <li><Link className='linkHeader' to="https://www.agro.bayer.com.ar/dekalb">DEKALB</Link></li>
                   <li><Link className='linkHeader' to="https://www.cropscience.bayer.com.ar/soluciones-maiz">BAYER</Link></li>
                   <li><Link className='linkHeader' to="/contacto">CONTACTO</Link></li>
                 </ul>
@@ -107,9 +110,9 @@ export default function HeaderComponent() {
                     {isDropdownVisible && 
                         <div className="dropdown-menu">
                           <ul className="ddmUl">
-                            {isAdmin && <Link to="" className="ddmLink" >Stock</Link>}
-                              <Link to="/" className='ddmLink' >Mi Perfil</Link>
-                              <Link to="/" className='ddmLink' onClick={handleOpenPopup}>Cerrar Sesión</Link>
+                            {isAdmin && <Link to="" className="ddmLink" onClick={handleMouseLeave} >Stock</Link>}
+                              <Link to="/perfil" className='ddmLink' onClick={handleMouseLeave}>Mi Perfil</Link>
+                              <Link className='ddmLink' onClick={handleOpenPopup}>Cerrar Sesión</Link>
                           </ul>
                       </div>                        
                     }

@@ -41,6 +41,7 @@ export default function LoginComponent() {
     }
 
     async function handleSubmit(){
+        console.log(authContext)
         if(await authContext.login(loginEmail, loginPassword)) {
             navigate(`/`)
         } else {

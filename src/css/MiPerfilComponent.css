@@ -1,0 +1,166 @@
+.miPerfilComponent {
+    display: grid;
+    /* height: 97vh; */
+    background-color: rgb(198, 198, 198);
+    padding: 3vw;
+    padding-top: 5.5vw;
+
+    background-image: url('../assets/corn-field-back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.topBar {
+    width: 100%;
+    height: 4vw;
+    background-color: white;
+    border-radius: 1vw;
+    margin-bottom: 2vw;
+    display: flex;
+}
+
+.profileLink {
+    display: flex;
+}
+
+.tbLabel {
+    margin-left: 2vw;
+}
+
+.tbLinks {
+    /* padding-top: 1vw; */
+    /* padding-right: 3vw; */
+    margin-left: auto;
+}
+
+.tbLinks:hover .prfileP {
+    color: green;
+}
+
+.tbLinks:hover  .arrowSvgPp {
+    stroke: green;
+}
+
+.arrowSvgPp {
+    align-self: center;
+    margin-left: 0.5vw;
+    width: 1.5vw;
+    fill: none;
+    /* stroke: rgb(37, 122, 22); */
+    stroke: gray;
+    stroke-width: 2;
+    padding-right: 2vw;
+}
+
+.prfileP {
+    padding-right: 0px;
+}
+
+.bottomCard {
+    display: flex;
+}
+
+.perfilCard {
+    background-color: white;
+    border-radius: 1vw;
+    width: 30%;
+    text-align: center;
+    /* height: 70vh; */
+}
+
+.perfilPhoto {
+    height: 15vw;
+    padding-top: 3vw;
+}
+
+.perfilInfo {
+}
+
+.perfilDerecha {
+    width: 70%; 
+    margin-left: 4vw;
+}
+
+
+
+.perfilDerechaBody {
+    background-color: white;
+    height: 16vw;
+    border-radius: 1vw;
+    padding: 3vw;
+    margin-bottom: 3vw;
+}
+
+.perfilDerechaSocalo {
+    display: flex;
+    /* padding-top: 1vw;
+    padding-left: 2vw; */
+    border-radius: 1vw;
+    background-color: white;
+    height: 5vw;
+    overflow: hidden;
+}
+
+.socaloDekalb {
+    display: 1;
+    width: 50%;
+    background-image: url('../assets/trecepta_banner_maslogo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.socaloBayer {
+    display: 1;
+    width: 50%;
+    background-image: url('../assets/bayer_largo_cosecha.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.socaloBayer:hover, .socaloDekalb:hover {
+    transform: scale(1.05);
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+}
+
+.cibLabel {
+    width: 10vw;
+    margin-left: 1vw;
+    color: rgb(122, 121, 121);
+}
+
+.cibInfo {
+    color: rgb(122, 121, 121);
+}
+
+.rowChangePassword {
+    padding-left: 11vw;
+    padding-top: 0.7vw;
+}
+
+.perfilButton {
+    font-family: 'Poppins';
+    border: none;
+    border-radius:  0.3vw;
+    font-size: 1.2vw;
+    padding: 0.4vw;
+    /* margin-top: 0.5vw; */
+    /* color: rgb(122, 121, 121); */
+    color: white;
+    background-color: gray;
+}
+
+.perfilButton:hover {
+    color: white;
+    background-color: rgb(2, 98, 2);
+    cursor: pointer;
+}

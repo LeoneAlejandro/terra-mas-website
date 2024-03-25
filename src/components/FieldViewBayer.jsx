@@ -46,7 +46,7 @@ export default function CultivarPlusBayer() {
                             con el medio ambiente mediante , contribuyendo a la seguridad alimentaria global y al bienestar 
                             de las comunidades agrícolas.
                         </p>
-                        <a className='conoceMasLink' href="https://www.cropscience.bayer.com.ar/soluciones-maiz">TODO SOBRE BAYER
+                        <a className='conoceMasLink' href="https://www.agro.bayer.com.ar/productos-proteccion-cultivos">TODOS NUESTROS PRODUCTOS
                             <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="4" y1="12" x2="20" y2="12"/>
                                 <polyline points="14 6 20 12 14 18"/>

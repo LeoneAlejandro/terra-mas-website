@@ -9,6 +9,7 @@ import FieldViewBayer from './FieldViewBayer'
 import ContactoComponent from './ContactoComponent'
 import LoginComponent from './LoginComponent'
 import SobreNosotros from './SobreNosotrosComponent'
+import MiPerfilComponent from './MiPerfilComponent'
 import AuthProvider, { useAuth } from './security/AuthContext'
 import '../css/TerraMasSiteApp.css'
 import ScrollToTop from './ScrollToTop'
@@ -39,14 +40,14 @@ export default function TerraMasSiteApp() {
 
                                 <Route path='/contacto' element={<ContactoComponent/>} />
 
-                                <Route path='/login' element={<LoginComponent/>}></Route>
+                                <Route path='/login' element={<LoginComponent/>}/>
+
+                                <Route path='/perfil' element={<MiPerfilComponent/>}/>
 
                                 <Route path='/sobre-nosotros' element={<>
                                         <SobreNosotros/>
                                         <UbicationComponent />
-                                </>
-                                        
-                                    }></Route>
+                                </>} />
 
                             </Routes>
                         <FooterComponent />

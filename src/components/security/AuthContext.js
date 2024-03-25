@@ -23,8 +23,8 @@ export default function AuthProvider({ children }) {
                 const jwtToken = 'Bearer ' + response.data.token
                 setAuthenticated(true)
                 setEmail(email)
-                setFirstName(response.data.firstName)
                 setToken(jwtToken)
+                setFirstName(response.data.firstName)
                 setUserRole(response.data.userRole)
 
                 apiClient.interceptors.request.use(

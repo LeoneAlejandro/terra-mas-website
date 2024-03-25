@@ -5,3 +5,6 @@ export const executeJwtAuthenticationService
 
 export const executeRegistrationService 
     = (firstName, lastName, email, password) => apiClient.post(`/registration`, { firstName, lastName, email, password })
+
+export const executeGetUserInfo
+    = (email) => apiClient.get(`/userinfo/${email}`)
