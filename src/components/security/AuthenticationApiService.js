@@ -8,3 +8,9 @@ export const executeRegistrationService
 
 export const executeGetUserInfo
     = (email) => apiClient.get(`/userinfo/${email}`)
+
+export const executeChangepassword
+    = (email, currentPassword, newPassword, confirmationPassword) => apiClient.post(`changepassword/${email}`, { currentPassword, newPassword, confirmationPassword })
+
+export const executeResetPassword
+    = (email) => apiClient.post(`resetpassword/${email}`)

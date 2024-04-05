@@ -69,7 +69,7 @@ export default function HeaderComponent() {
             <div className="logoutScreen" ref={modalRef} onClick={closeModal}>
                 <div className='logoutCard'>
                   <img className='xButton' src={closeButton} alt="X" onClick={() => setShowPopup(false) }/>
-                  <img src={logoutImg} alt="Imagen de deslogueo"/>
+                  <img className='logoutCardImg' src={logoutImg} alt="Imagen de deslogueo"/>
                   <p className='logoutP'>Estas por cerra sesión, estas seguro?</p>
                   <button className='formButton' onClick={() => (setShowPopup(false), logout())}>
                     <span className='transition'></span>

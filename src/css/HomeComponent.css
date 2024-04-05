@@ -69,7 +69,7 @@ video {
 
 
 .nuevasTecnologiasIzquierda {
-    background-image: url('../assets/nuevas_tecnologias_h.png');
+    background-image: url('../assets/nuevas_tecnologias_h.jpg');
     width: 50%;
     display: 1;
     background-size: cover;
@@ -93,7 +93,7 @@ video {
     .nuevasTecnologiasIzquierda {
         width: 20%;
         background-position: -10px 0%;
-        background-image: url('../assets/nuevas_tecnologias_v.png');
+        background-image: url('../assets/nuevas_tecnologias_v.jpg');
     }
     
 }
@@ -127,6 +127,6 @@ video {
         width: 100%;
         height: 20vw;
         /* background-position: 0% 0px; */
-        background-image: url('../assets/trecepta_banner.png');
+        background-image: url('../assets/trecepta_banner.jpg');
     }
 }

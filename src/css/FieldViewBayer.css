@@ -25,7 +25,7 @@
 }
 
 .bayerInsumosImagen {
-    background-image: url('../assets/bayer_banner_h.png');
+    background-image: url('../assets/bayer_banner_h.jpg');
     background-color: gray;
     background-size: cover;
     background-repeat: no-repeat;
@@ -57,7 +57,7 @@
 
     .bayerInsumosImagen {
         width: 20%;
-        background-image: url('../assets/banner_bayer_v.png');
+        background-image: url('../assets/banner_bayer_v.jpg');
         background-position: center center;
     }
     
@@ -75,7 +75,7 @@
         width: 100%;
         height: 20vw;
         background-position: center center;
-        background-image: url('../assets/FieldView_banner.png');
+        background-image: url('../assets/FieldView_banner.jpg');
     }
 
     .bayerInsumos {
@@ -93,6 +93,6 @@
         width: 100%;
         height: 20vw;
         background-position: center center;
-        background-image: url('../assets/bayer_banner_line.png');
+        background-image: url('../assets/bayer_banner_line.jpg');
     }
 }
