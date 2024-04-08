@@ -13,6 +13,7 @@ import MiPerfilComponent from './MiPerfilComponent'
 import AuthProvider, { useAuth } from './security/AuthContext'
 import '../css/TerraMasSiteApp.css'
 import ScrollToTop from './ScrollToTop'
+import PasswordResetPage from './PasswordResetPage'
 
 export default function TerraMasSiteApp() {
 
@@ -52,6 +53,8 @@ export default function TerraMasSiteApp() {
                                         <MiPerfilComponent />
                                     </AuthenticatedRoute>
                                 } />
+
+                                <Route path='/reset-password/:uid' element={<PasswordResetPage/>} />
 
                             </Routes>
                         <FooterComponent />
