@@ -54,7 +54,10 @@ export default function TerraMasSiteApp() {
                                     </AuthenticatedRoute>
                                 } />
 
-                                <Route path='/reset-password/:uid' element={<PasswordResetPage/>} />
+                                <Route path='/reset-password/:uid' element={<>
+                                    <PasswordResetPage/>
+                                    {/* <HomeComponent />{} */}
+                                </>} />
 
                             </Routes>
                         <FooterComponent />

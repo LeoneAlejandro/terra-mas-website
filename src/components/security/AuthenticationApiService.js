@@ -12,5 +12,11 @@ export const executeGetUserInfo
 export const executeChangepassword
     = (email, currentPassword, newPassword, confirmationPassword) => apiClient.post(`changepassword/${email}`, { currentPassword, newPassword, confirmationPassword })
 
-export const executeResetPassword
+export const executeRequestPasswordChange
     = (email) => apiClient.post(`resetpassword/${email}`)
+
+export const executeResetPassword
+    = (email, newPassword) => apiClient.post(`resetpassword/cofirm-new-password`, { email, newPassword })
+
+export const executeUidValidation
+    = (uid) => apiClient.get(`/resetpassword/verify-uid/${uid}`)

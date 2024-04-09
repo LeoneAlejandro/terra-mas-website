@@ -130,7 +130,7 @@ export default function MiPerfilComponent() {
                     </div>
                     <div className="tbLinks">
                         <Link className='profileLink' to="/">
-                            <p className='prfileP'>VOLVER A LA HOME</p>
+                            <p className='prfileP'>VOLVER A LA PAGINA PRINCIPAL</p>
                             <svg className='arrowSvgPp' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="4" y1="12" x2="20" y2="12"/>
                                 <polyline points="14 6 20 12 14 18"/>
@@ -145,7 +145,11 @@ export default function MiPerfilComponent() {
                             <img src={pp} alt="" className="perfilPhoto" />
 
                             <div className="perfilInfo">
-                                <h1 style={{color:"rgb(122, 121, 121)"}}>Perfil</h1>
+                                { userInfo ? 
+                                    (<h1 style={{color:"rgb(122, 121, 121)"}}>{ userInfo.firstName} {userInfo.lastName}</h1>)
+                                    :
+                                    (<h1 style={{color:"rgb(122, 121, 121)"}}>Perfil</h1>)
+                                }
                             </div>
                     </div>
 

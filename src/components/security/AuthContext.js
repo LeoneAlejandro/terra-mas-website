@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { apiClient } from "../api/ApiClient";
-import { executeChangepassword, executeJwtAuthenticationService, executeRegistrationService, executeResetPassword } from "./AuthenticationApiService";
+import { executeChangepassword, executeJwtAuthenticationService, executeRegistrationService, executeRequestPasswordChange, executeResetPassword, executeUidValidation } from "./AuthenticationApiService";
 
 export const AuthContext = createContext()
 export const useAuth = () => useContext(AuthContext)
@@ -90,14 +90,29 @@ export default function AuthProvider({ children }) {
         }
     }
 
-    async function resetPassword(email) {
+    async function requestPasswordChange(email) {
         try {
-            const response = await executeResetPassword(email)
+            const response = await executeRequestPasswordChange(email)
+            if(response.status === 200) {
+                return response
+            } else {
+                alert("Error pidiendo request de cambio de contraseña")
+            }
+        } catch(error) {
+            // logout()
+            console.log(error)
+            return false
+        }
+    }
 
+    async function resetPassword(email, newPassword) {
+        try {
+            const response = await executeResetPassword(email, newPassword)
             if(response.status === 200) {
                 return response
             } else {
                 console.log("Error al resetear")
+                alert("Error backend reseteando password")
                 return false
             }
         } catch(error) {
@@ -107,9 +122,23 @@ export default function AuthProvider({ children }) {
         }
     }
 
+    async function checkUidValidation(uid) {
+        try {
+            const response = await executeUidValidation(uid)
+            if(response.status === 200) {
+                return response
+            } else {
+                console.log("Error al validar UID")
+                return false
+            }
+        } catch(error) {
+            console.log(error)
+            return false
+        }
+    }
 
     return(
-        <AuthContext.Provider value={{ isAuthenticated, login, logout, register, changePassword, resetPassword, firstName: firstName, username: email, token, userRole: userRole}}>
+        <AuthContext.Provider value={{ isAuthenticated, login, logout, register, changePassword, resetPassword, checkUidValidation, requestPasswordChange, firstName: firstName, username: email, token, userRole: userRole}}>
             {children}
         </AuthContext.Provider>
     )

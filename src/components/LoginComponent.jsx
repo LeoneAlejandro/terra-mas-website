@@ -21,6 +21,7 @@ export default function LoginComponent() {
 
 
     const authContext = useAuth();
+    const navigate = useNavigate();
 
     function handleResetPasswordEmailChange(event) {
         setResetPasswordEmail(event.target.value)
@@ -87,19 +88,18 @@ export default function LoginComponent() {
     };
 
 
-    const navigate = useNavigate();
+
 
 
     async function handleRecoverPassword() {
         try {
-            const changePasswordResponse = await authContext.resetPassword(resetPasswordEmail);
+            const changePasswordResponse = await authContext.requestPasswordChange(resetPasswordEmail);
             if(changePasswordResponse.status === 200) {
                 alert('El correo fue enviado exitosamente!')
                 setShowRecoverPasswordPopup(false)
                 setResetPasswordEmail('')
             } else {
-                console.log("No se pudo resetear la contraseña")
-                alert('Error en backend')
+                alert('No pudimos enviar el correo, por favor revisa el correo electrónico ingresado')
             }
         } catch (error) {
             console.error('Error initiating password recovery:', error);

@@ -41,7 +41,7 @@
 
 
 .loginComponent {
-	height: 100%; 
+	min-height: 88vh; 
 	/* VEEEEEEEEEEEEEEEEEEEEER */
 	padding-top: 7vw;
     padding-left: 20%;
