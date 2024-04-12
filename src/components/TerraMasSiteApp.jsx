@@ -1,4 +1,3 @@
-//import AuthProvider, {useAuth} from './security/AuthContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Navigate } from 'react-router-dom'
 import HeaderComponent from './HeaderComponent'
@@ -8,7 +7,6 @@ import FooterComponent from './FooterComponent'
 import FieldViewBayer from './FieldViewBayer'
 import ContactoComponent from './ContactoComponent'
 import LoginComponent from './LoginComponent'
-import SobreNosotros from './SobreNosotrosComponent'
 import MiPerfilComponent from './MiPerfilComponent'
 import AuthProvider, { useAuth } from './security/AuthContext'
 import '../css/TerraMasSiteApp.css'
@@ -43,21 +41,20 @@ export default function TerraMasSiteApp() {
 
                                 <Route path='/login' element={<LoginComponent/>}/>
 
-                                <Route path='/sobre-nosotros' element={<>
+                                {/* <Route path='/sobre-nosotros' element={<>
                                         <SobreNosotros/>
                                         <UbicationComponent />
-                                </>} />
+                                    </>} /> */}
 
                                 <Route path='/perfil' element={
                                     <AuthenticatedRoute>
                                         <MiPerfilComponent />
                                     </AuthenticatedRoute>
-                                } />
+                                    } />
 
-                                <Route path='/reset-password/:uid' element={<>
+                                <Route path='/reset-password/:uid' element={
                                     <PasswordResetPage/>
-                                    {/* <HomeComponent />{} */}
-                                </>} />
+                                    } />
 
                             </Routes>
                         <FooterComponent />

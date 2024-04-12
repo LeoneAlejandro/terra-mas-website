@@ -29,12 +29,12 @@ export default function HomeComponent() {
                             Asesorate con nuestros ingenieros sobre los mejores híbridos Dekalb para tu 
                             siembra, y nuestra gran variedad de productos de protección de cultivos.
                         </p>
-                        {/* <a className='conoceMasLink' href="/sobre-nosotros">CONOCE MÁS SOBRE NOSOTROS
+                        <a className='conoceMasLink' href="/contacto">CONTACTANOS
                             <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="4" y1="12" x2="20" y2="12"/>
                                 <polyline points="14 6 20 12 14 18"/>
                             </svg>
-                        </a> */}
+                        </a>
                     </div>
                 </div>
                 <div className="sobreNosotrosImagen"></div>

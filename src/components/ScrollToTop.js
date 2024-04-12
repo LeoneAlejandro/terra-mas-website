@@ -15,22 +15,3 @@ export default function ScrollToTop({ children }) {
   
   return children;
 }
-
-
-
-/* async function checkUIDValidity() {
-  try {
-      // Make a request to backend to verify UID existence
-      const response = apiClient.executeUidValidation(urlUID);
-      if (response.status === 200) {
-      //   setIsValidUID(true);
-      //   setLoading(false);
-      console.log("uid existe")
-      } else {
-          alert("La UID no existe")
-      }
-    } catch (error) {
-      console.error('Error verifying UID:', error);
-      // Handle error
-    }
-} */

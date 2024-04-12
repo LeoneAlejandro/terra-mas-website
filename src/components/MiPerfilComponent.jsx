@@ -2,9 +2,9 @@ import '../css/MiPerfilComponent.css'
 import pp from '../assets/ppgeneric.jpg'
 import { useAuth } from './security/AuthContext';
 import { executeGetUserInfo } from './security/AuthenticationApiService'
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import closeButton from '../assets/close_icon.jpg'
+import ChangePasswordPopup from './ChangePasswordPopupComponent';
 
 export default function MiPerfilComponent() {
 
@@ -12,117 +12,33 @@ export default function MiPerfilComponent() {
     const email = authContext.username
     
     const [userInfo, setUserInfo] = useState(null);
-    const [contraseñaPopup, setContraseñaPopup] = useState(null);
-    const [currentPassword, setCurrentPassword] = useState('')
-    const [newPassword, setNewPassword] = useState('')
-    const [confirmationPassword, setConfirmationPassword] = useState('')
-    const [mensajeError, setMensajeError] = useState('')
-    const [mensajeExito, setMensajeExito] = useState('')
+    const [changePasswordPopup, setChangePasswordPopup] = useState(false);
+
 
     useEffect(() => {
+        async function fetchUserInfo() {
+            try {
+                const userInfoResponse = await executeGetUserInfo(email);
+                setUserInfo(userInfoResponse.data);
+            } catch (error) {
+                console.error('Error buscando usuario:', error);
+            }
+        };
+
         fetchUserInfo()
     },[])
 
-
-    async function fetchUserInfo() {
-        try {
-            const userInfoResponse = await executeGetUserInfo(email);
-            setUserInfo(userInfoResponse.data);
-        } catch (error) {
-            console.error('Error buscando usuario:', error);
-        }
+    const onCambiarCotnraseña = () => {
+        setChangePasswordPopup(!changePasswordPopup)
     }
-
-    const onCambiarcotnraseña = () => {
-        setContraseñaPopup(true)
-    }
-
-
-    function handleRegCurrentPasswordChange(event) {
-        setCurrentPassword(event.target.value)
-    }
-    function handleRegNewPasswordChange(event) {
-        setNewPassword(event.target.value)
-    }
-    function handleRegConfirmationPasswordChange(event) {
-        setConfirmationPassword(event.target.value)
-    }
-
-    const modalRef = useRef();
-
-    function closeModal(e) {
-      if(modalRef.current === e.target) {
-        setContraseñaPopup(false)
-      }
-    }
-
-    async function handleChangePassword() {
-        setMensajeError('')
-        setMensajeExito('')
-
-        if(newPassword === '' || confirmationPassword === '' || currentPassword === '') {
-            setMensajeError("Debes completar todos los campos")
-            return
-        }
-
-        if(newPassword !== confirmationPassword) {
-            setMensajeError("Las nuevas contraseñas no coinciden")
-            return
-        }
-
-        if(newPassword === currentPassword) {
-            setMensajeError("La nueva contraseña es igual a la existente")
-            return
-        }
-
-        if(await authContext.changePassword(email, currentPassword, newPassword, confirmationPassword)) {
-            // navigate(`/`)
-            console.log("Contraseña guardada")
-            setMensajeError('')
-            setMensajeExito("Contraseña cambiada correctamente")
-            resetValuesPassword()
-        } else {
-            console.log("No se pudo cambiar contraseña")
-            setMensajeError("La contraseña actual es incorrecta")
-        }
-    }
-
-    const resetValuesPassword = () => {
-        setCurrentPassword('')
-        setNewPassword('')
-        setConfirmationPassword('')
-    }
-
-    
 
     return(
         <>
-            { contraseñaPopup && 
-                <div className="logoutScreen" ref={modalRef} onClick={closeModal}>
-                    <div className="logoutCard">
-                        <img className='xButton' src={closeButton} alt="X" onClick={() => setContraseñaPopup(false) }/>
-                        <h6>Cambio de contraseña</h6>
-                        <input value={currentPassword} onChange={handleRegCurrentPasswordChange} type="text" placeholder="Contraseña actual" />
-                        <input value={newPassword} onChange={handleRegNewPasswordChange} type="text" placeholder="Nueva contraseña" />
-                        <input value={confirmationPassword} onChange={handleRegConfirmationPasswordChange} type="text" placeholder="Repetir contraseña" />
-                        { mensajeError && 
-                        <div className="errorMessage">
-                          { mensajeError }  
-                        </div>
-                        }
-                        { mensajeExito && 
-                        <div className="successMessage">
-                          { mensajeExito }  
-                        </div>
-                        }
-                        <button onClick={handleChangePassword} className='formButton' type='button'>Cambiar contraseña</button>
-                    </div>
-                </div>
+            { changePasswordPopup &&
+                <ChangePasswordPopup onClose={onCambiarCotnraseña}/>
             }
         
             <div className="miPerfilComponent">
-
-
 
                 <div className="topBar">
                     <div className="tbLabel">
@@ -184,7 +100,7 @@ export default function MiPerfilComponent() {
                                         <div className="cibInfo">*********</div>
                                     </div>
                                     <div className="rowChangePassword">
-                                        <button className='perfilButton' onClick={onCambiarcotnraseña}>Cambiar contraseña</button>
+                                        <button className='perfilButton' onClick={onCambiarCotnraseña}>Cambiar contraseña</button>
                                     </div>
                                 </>
                             ) : (
@@ -204,3 +120,92 @@ export default function MiPerfilComponent() {
 
     )
 }
+
+
+
+
+    
+    // const modalRef = useRef();
+
+    // function closeModal(e) {
+    //   if(modalRef.current === e.target) {
+    //     setChangePasswordPopup(false)
+    //     resetPasswordValues()
+    //     setSuccessMessage('')
+    //   }
+    // }
+
+
+
+
+
+    // function handleRegCurrentPasswordChange(event) {
+    //     setCurrentPassword(event.target.value)
+    // }
+    // function handleRegNewPasswordChange(event) {
+    //     setNewPassword(event.target.value)
+    // }
+    // function handleRegConfirmationPasswordChange(event) {
+    //     setConfirmationPassword(event.target.value)
+    // }
+
+
+    // async function handleChangePassword() {
+    //     setErrorMessage('')
+    //     setSuccessMessage('')
+
+    //     if(newPassword === '' || confirmationPassword === '' || currentPassword === '') {
+    //         setErrorMessage("Debes completar todos los campos")
+    //         return
+    //     }
+
+    //     if(newPassword !== confirmationPassword) {
+    //         setErrorMessage("Las nuevas contraseñas no coinciden")
+    //         return
+    //     }
+
+    //     if(newPassword === currentPassword) {
+    //         setErrorMessage("La nueva contraseña es igual a la existente")
+    //         return
+    //     }
+
+    //     if(await authContext.changePassword(email, currentPassword, newPassword, confirmationPassword)) {
+    //         // navigate(`/`)
+    //         console.log("Contraseña guardada")
+    //         setErrorMessage('')
+    //         setSuccessMessage("Contraseña cambiada correctamente")
+    //         resetPasswordValues()
+    //     } else {
+    //         console.log("No se pudo cambiar contraseña")
+    //         setErrorMessage("La contraseña actual es incorrecta")
+    //     }
+    // }
+
+    // const resetPasswordValues = () => {
+    //     setCurrentPassword('')
+    //     setNewPassword('')
+    //     setConfirmationPassword('')
+    //     setErrorMessage('')
+    // }
+
+    // <div className="grayBackgroundChangePassword" ref={modalRef} onClick={closeModal}>
+    //     <img className='changePasswordIcon' src={greenKey} alt="" />
+    //     <div className="changePasswordCard">
+    //         <img className='xButton' src={closeButton} alt="X" onClick={() => (setChangePasswordPopup(false), resetPasswordValues()) }/>
+    //         <h6>Cambio de contraseña</h6>
+    //         <input value={currentPassword} onChange={handleRegCurrentPasswordChange} type="text" placeholder="Contraseña actual" />
+    //         <input value={newPassword} onChange={handleRegNewPasswordChange} type="text" placeholder="Nueva contraseña" />
+    //         <input value={confirmationPassword} onChange={handleRegConfirmationPasswordChange} type="text" placeholder="Repetir contraseña" />
+    //         { errorMessage && 
+    //         <div className="errorMessage">
+    //           { errorMessage }  
+    //         </div>
+    //         }
+    //         { successMessage && 
+    //         <div className="successMessage">
+    //           { successMessage }  
+    //         </div>
+    //         }
+    //         <button onClick={handleChangePassword} className='formButton' type='button'>Cambiar contraseña</button>
+    //     </div>
+    // </div>

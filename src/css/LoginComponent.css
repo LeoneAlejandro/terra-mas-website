@@ -39,6 +39,10 @@
     font-family: 'Poppins';
 }
 
+.ghost:hover {
+	cursor: pointer;
+}
+
 
 .loginComponent {
 	min-height: 88vh; 
@@ -211,16 +215,34 @@ input:focus {
 }
 
 
-.loginA {
-	color: #333;
-	font-size: 1.2vw;
-}
-
-.loginA:hover {
-	color: #15431b;
-}
-
 .loginIniciar {
 	color: #2c6933;
 	font-size: 2.7vw;
+}
+
+.requestPasswordResetCard {
+	outline: 0.2vw solid rgb(58, 58, 58);
+    border-radius: 1vw;
+    width: 35vw;
+    height: 23.5vw;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vw;
+}
+
+.resetPasswordImg {
+    width: 8vw;
+    position: absolute;
+    margin-top: -4vw;
+    z-index: 2;
+}
+
+.newAccountIcon {
+	position: absolute;
+	width: 8vw;
+	z-index: 999;
+	margin-top: 3vw;
+	margin-left: 43.4vw;
 }

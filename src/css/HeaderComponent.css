@@ -67,8 +67,7 @@ nav a {
     fill: gray;
 }
 
-.ddmMenu {
-}
+
 
 .ddmButton {
     min-width: 10vw;
@@ -90,6 +89,10 @@ nav a {
     color: gray;
     background-color: white;
     cursor: pointer;
+}
+
+.ddmMenu {
+    /* display: inline-flex; */
 }
 
 .dropdown-menu {

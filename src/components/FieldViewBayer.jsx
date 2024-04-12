@@ -41,9 +41,10 @@ export default function CultivarPlusBayer() {
                             ofreciendo productos innovadores para la protección y mejora de los rendimientos 
                             de los cultivos. Desde herbicidas y fungicidas hasta los insecticidas más avanzados, la 
                             cartera de Bayer aborda desafíos específicos, asegurando cosechas saludables. 
-                        </p><p>
+                        </p>
+                        <p>
                             Comprometidos con la sustentabilidad, Bayer fomenta prácticas agrícolas respetuosas 
-                            con el medio ambiente mediante , contribuyendo a la seguridad alimentaria global y al bienestar 
+                            con el medio ambiente, contribuyendo a la seguridad alimentaria global y al bienestar 
                             de las comunidades agrícolas.
                         </p>
                         <a className='conoceMasLink' href="https://www.agro.bayer.com.ar/productos-proteccion-cultivos">TODOS NUESTROS PRODUCTOS

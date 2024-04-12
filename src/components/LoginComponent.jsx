@@ -1,9 +1,9 @@
 import '../css/LoginComponent.css'
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './security/AuthContext';
 import closeButton from '../assets/close_icon.jpg';
-import recoverPasswordJpeg from '../assets/reset-password.jpg'
+import recoverPasswordJpeg from '../assets/reset-password.png'
 
 export default function LoginComponent() {
 
@@ -22,6 +22,14 @@ export default function LoginComponent() {
 
     const authContext = useAuth();
     const navigate = useNavigate();
+
+    const modalRef = useRef();
+
+    function closeModal(e) {
+      if(modalRef.current === e.target) {
+        setShowRecoverPasswordPopup(false)
+      }
+    }
 
     function handleResetPasswordEmailChange(event) {
         setResetPasswordEmail(event.target.value)
@@ -110,11 +118,11 @@ export default function LoginComponent() {
     return(
         <>
             {showRecoverPasswordPopup && 
-                <div className="logoutScreen">
-                    <div className='logoutCard'>
+                <div className="logoutScreen" ref={modalRef} onClick={closeModal}>
+                    <div className='requestPasswordResetCard'>
                         <img className='xButton' src={closeButton} alt="X" onClick={() => setShowRecoverPasswordPopup(false) }/>
                         <img className='resetPasswordImg' src={recoverPasswordJpeg} alt="Imagen de recuperación de contraseña"/>
-                        <p className='logoutP'>Ingresa tu correco electrónico para recuperar la contraseña.</p>
+                        <p className='logoutPR'>Para recuperar tu contraseña ingresá tu correo electrónico y envía la solicitud. Una vez realizado recibirás un correo electrónico para resetearla.</p>
                         <input value={resetPasswordEmail} onChange={handleResetPasswordEmailChange} type="text" placeholder='Email' />
                         <button className='formButton' onClick={() => (handleRecoverPassword())}>
                         {/* <span className='transition'></span> */}
@@ -124,59 +132,59 @@ export default function LoginComponent() {
                 </div>
             }
         
-        <div className="loginComponent">
-            
-            <div className={`container ${isSignUpActive ? 'right-panel-active' : ''}`}>
-                    <div className="form-container sign-up-container">
-                        <form action="#">
-                            <h1 className='loginIniciar'>Crear cuenta</h1>
-                            <input value={singupFirstName} onChange={handleRegFirstNameChange} type="text" placeholder="Nombre" />
-                            <input value={singupLastName} onChange={handleRegLastNameChange} type="text" placeholder="Apellido" />
-                            <input value={singupEmail} onChange={handleRegUsernameChange} type="email" placeholder="Email" />
-                            <input value={singupPassword} onChange={handleRegPasswordChange} type="password" placeholder="Contraseña" />
-                            {showSingupErrorMessage &&
-                                <div className="errorMessage">
-                                    {showSingupErrorMessage}
+            <div className="loginComponent">
+
+                <div className={`container ${isSignUpActive ? 'right-panel-active' : ''}`}>
+                        <div className="form-container sign-up-container">
+                            <form action="#">
+                                <h1 className='loginIniciar'>Crear cuenta</h1>
+                                <input value={singupFirstName} onChange={handleRegFirstNameChange} type="text" placeholder="Nombre" />
+                                <input value={singupLastName} onChange={handleRegLastNameChange} type="text" placeholder="Apellido" />
+                                <input value={singupEmail} onChange={handleRegUsernameChange} type="email" placeholder="Email" />
+                                <input value={singupPassword} onChange={handleRegPasswordChange} type="password" placeholder="Contraseña" />
+                                {showSingupErrorMessage &&
+                                    <div className="errorMessage">
+                                        {showSingupErrorMessage}
+                                    </div>
+                                }
+                                <button onClick={handleRegister} className='formButton' type='button'>Crear cuenta</button>
+                            </form>
+                        </div>  
+
+                        <div className="form-container sign-in-container">
+                            <form action="#">
+                                <h1 className='loginIniciar'>Iniciar sesión</h1>
+                                <input value={loginEmail} onChange={handleUsernameChange} type="email" placeholder="Email" />
+                                <input value={loginPassword} onChange={handlePasswordChange} type="password" placeholder="Password" />
+                                {showErrorMessage && 
+                                    <div className="errorMessage">
+                                        {showErrorMessage}
+                                    </div>
+                                }
+                                <button className='hyperlinkButton' onClick={() => setShowRecoverPasswordPopup(true)}>olvidaste tu contraseña ?</button>
+                                <button onClick={handleSubmit} className='formButton' type='button'>Ingresar</button>
+                            </form>
+                        </div>
+
+                        <div className="overlay-container">
+                            <div className="overlay">
+                                
+                                <div className={`overlay-panel overlay-left ${isSignUpActive ? 'active' : ''}`}>
+                                    <h1 className='loginTitulo'>Ya tenés cuenta ?</h1>
+                                    <p className='loginParrafo'>Si ya creaste una cuenta podés ingresar con el siguiente botón</p>
+                                    <button className="ghost" onClick={handleSignInClick}>Iniciar sesión</button>
                                 </div>
-                            }
-                            <button onClick={handleRegister} className='formButton' type='button'>Crear cuenta</button>
-                        </form>
-                    </div>  
 
-                    <div className="form-container sign-in-container">
-                        <form action="#">
-                            <h1 className='loginIniciar'>Iniciar sesión</h1>
-                            <input value={loginEmail} onChange={handleUsernameChange} type="email" placeholder="Email" />
-                            <input value={loginPassword} onChange={handlePasswordChange} type="password" placeholder="Password" />
-                            {showErrorMessage && 
-                                <div className="errorMessage">
-                                    {showErrorMessage}
+                                <div className={`overlay-panel overlay-right ${!isSignUpActive ? 'active' : ''}`}>
+                                    <h1 className='loginTitulo'>Bienvenido !</h1>
+                                    <p className='loginParrafo'>Si todavía no creaste una cuenta lo podés hacer mediante le siguiente botón</p>
+                                    <button className="ghost" onClick={handleSignUpClick}>Crear cuenta</button>
                                 </div>
-                            }
-                            <a className='loginA' onClick={() => setShowRecoverPasswordPopup(true)} href="#">olvidaste tu contraseña ?</a>
-                            <button onClick={handleSubmit} className='formButton' type='button'>Ingresar</button>
-                        </form>
-                    </div>
-
-                    <div className="overlay-container">
-                        <div className="overlay">
-                            
-                            <div className={`overlay-panel overlay-left ${isSignUpActive ? 'active' : ''}`}>
-                                <h1 className='loginTitulo'>Ya tenés cuenta ?</h1>
-                                <p className='loginParrafo'>Si ya creaste una cuenta podés ingresar con el siguiente botón</p>
-                                <button className="ghost" onClick={handleSignInClick}>Iniciar sesión</button>
-                            </div>
-
-                            <div className={`overlay-panel overlay-right ${!isSignUpActive ? 'active' : ''}`}>
-                                <h1 className='loginTitulo'>Bienvenido !</h1>
-                                <p className='loginParrafo'>Si todavía no creaste una cuenta lo podés hacer mediante le siguiente botón</p>
-                                <button className="ghost" onClick={handleSignUpClick}>Crear cuenta</button>
                             </div>
                         </div>
-                    </div>
-            </div>
+                </div>
 
-        </div>
+            </div>
         </>
     )
 }
