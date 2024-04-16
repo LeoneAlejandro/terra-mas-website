@@ -1,9 +1,8 @@
 import '../css/LoginComponent.css'
-import React, { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './security/AuthContext';
-import closeButton from '../assets/close_icon.jpg';
-import recoverPasswordJpeg from '../assets/reset-password.png'
+import AccountRecoveryRequest from './AccountRecoveryRequestComponent';
 
 export default function LoginComponent() {
 
@@ -17,23 +16,11 @@ export default function LoginComponent() {
     const [showSingupErrorMessage, setShowSingupErrorMessage] = useState('')
     const [isSignUpActive, setIsSignUpActive] = useState(false)
     const [showRecoverPasswordPopup, setShowRecoverPasswordPopup] = useState('')
-    const [resetPasswordEmail, setResetPasswordEmail] = useState('')
 
 
     const authContext = useAuth();
     const navigate = useNavigate();
 
-    const modalRef = useRef();
-
-    function closeModal(e) {
-      if(modalRef.current === e.target) {
-        setShowRecoverPasswordPopup(false)
-      }
-    }
-
-    function handleResetPasswordEmailChange(event) {
-        setResetPasswordEmail(event.target.value)
-    }
 
     function handleUsernameChange(event) {
         setLoginEmail(event.target.value)
@@ -96,54 +83,28 @@ export default function LoginComponent() {
     };
 
 
-
-
-
-    async function handleRecoverPassword() {
-        try {
-            const changePasswordResponse = await authContext.requestPasswordChange(resetPasswordEmail);
-            if(changePasswordResponse.status === 200) {
-                alert('El correo fue enviado exitosamente!')
-                setShowRecoverPasswordPopup(false)
-                setResetPasswordEmail('')
-            } else {
-                alert('No pudimos enviar el correo, por favor revisa el correo electrónico ingresado')
-            }
-        } catch (error) {
-            console.error('Error initiating password recovery:', error);
-            alert('Failed to initiate password recovery.');
-        }
-    };
+    const togglePasswordRecoveryPopup = () => {
+        setShowRecoverPasswordPopup(!showRecoverPasswordPopup)
+    }
     
     return(
         <>
             {showRecoverPasswordPopup && 
-                <div className="logoutScreen" ref={modalRef} onClick={closeModal}>
-                    <div className='requestPasswordResetCard'>
-                        <img className='xButton' src={closeButton} alt="X" onClick={() => setShowRecoverPasswordPopup(false) }/>
-                        <img className='resetPasswordImg' src={recoverPasswordJpeg} alt="Imagen de recuperación de contraseña"/>
-                        <p className='logoutPR'>Para recuperar tu contraseña ingresá tu correo electrónico y envía la solicitud. Una vez realizado recibirás un correo electrónico para resetearla.</p>
-                        <input value={resetPasswordEmail} onChange={handleResetPasswordEmailChange} type="text" placeholder='Email' />
-                        <button className='formButton' onClick={() => (handleRecoverPassword())}>
-                        {/* <span className='transition'></span> */}
-                        Reestablecer contraseña
-                        </button>
-                    </div>
-                </div>
+                <AccountRecoveryRequest onClose={togglePasswordRecoveryPopup}/>
             }
         
-            <div className="loginComponent">
+            <div className="login-component">
 
                 <div className={`container ${isSignUpActive ? 'right-panel-active' : ''}`}>
                         <div className="form-container sign-up-container">
                             <form action="#">
-                                <h1 className='loginIniciar'>Crear cuenta</h1>
+                                <h1 className='login-title'>Crear cuenta</h1>
                                 <input value={singupFirstName} onChange={handleRegFirstNameChange} type="text" placeholder="Nombre" />
                                 <input value={singupLastName} onChange={handleRegLastNameChange} type="text" placeholder="Apellido" />
                                 <input value={singupEmail} onChange={handleRegUsernameChange} type="email" placeholder="Email" />
                                 <input value={singupPassword} onChange={handleRegPasswordChange} type="password" placeholder="Contraseña" />
                                 {showSingupErrorMessage &&
-                                    <div className="errorMessage">
+                                    <div className="error-message">
                                         {showSingupErrorMessage}
                                     </div>
                                 }
@@ -153,15 +114,15 @@ export default function LoginComponent() {
 
                         <div className="form-container sign-in-container">
                             <form action="#">
-                                <h1 className='loginIniciar'>Iniciar sesión</h1>
+                                <h1 className='login-title'>Iniciar sesión</h1>
                                 <input value={loginEmail} onChange={handleUsernameChange} type="email" placeholder="Email" />
-                                <input value={loginPassword} onChange={handlePasswordChange} type="password" placeholder="Password" />
+                                <input value={loginPassword} onChange={handlePasswordChange} type="password" placeholder="Contraseña" />
                                 {showErrorMessage && 
-                                    <div className="errorMessage">
+                                    <div className="error-message">
                                         {showErrorMessage}
                                     </div>
                                 }
-                                <button className='hyperlinkButton' onClick={() => setShowRecoverPasswordPopup(true)}>olvidaste tu contraseña ?</button>
+                                <button className='hyperlink-button' onClick={togglePasswordRecoveryPopup} type="button">olvidaste tu contraseña ?</button>
                                 <button onClick={handleSubmit} className='formButton' type='button'>Ingresar</button>
                             </form>
                         </div>
@@ -170,20 +131,19 @@ export default function LoginComponent() {
                             <div className="overlay">
                                 
                                 <div className={`overlay-panel overlay-left ${isSignUpActive ? 'active' : ''}`}>
-                                    <h1 className='loginTitulo'>Ya tenés cuenta ?</h1>
-                                    <p className='loginParrafo'>Si ya creaste una cuenta podés ingresar con el siguiente botón</p>
-                                    <button className="ghost" onClick={handleSignInClick}>Iniciar sesión</button>
+                                    <h1 className='login-title-negative'>Ya tenés cuenta ?</h1>
+                                    <p className='login-p'>Si ya creaste una cuenta podés ingresar con el siguiente botón</p>
+                                    <button className="ghost-button" onClick={handleSignInClick}>Iniciar sesión</button>
                                 </div>
 
                                 <div className={`overlay-panel overlay-right ${!isSignUpActive ? 'active' : ''}`}>
-                                    <h1 className='loginTitulo'>Bienvenido !</h1>
-                                    <p className='loginParrafo'>Si todavía no creaste una cuenta lo podés hacer mediante le siguiente botón</p>
-                                    <button className="ghost" onClick={handleSignUpClick}>Crear cuenta</button>
+                                    <h1 className='login-title-negative'>Bienvenido !</h1>
+                                    <p className='login-p'>Si todavía no creaste una cuenta lo podés hacer mediante le siguiente botón</p>
+                                    <button className="ghost-button" onClick={handleSignUpClick}>Crear cuenta</button>
                                 </div>
                             </div>
                         </div>
                 </div>
-
             </div>
         </>
     )

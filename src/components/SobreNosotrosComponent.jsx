@@ -5,13 +5,11 @@ export default function SobreNosotros() {
     return(
 
         <div className="sobreNosotrosComponent">
-
             <div className="sobreNosotrosBanner">
                 <h1 className='contactoBannerTitulo'>SOBRE NOSOTROS</h1>
             </div>
-
             <div className="nuestraHisotira">
-                <div className="containerText">
+                <div className="container-text">
                     <h1>Nuestra Historia</h1>
                     <p> 
                         Desde el año 2003 nos dedicamos a brindar productos y servicios agropecuarios, 
@@ -24,9 +22,8 @@ export default function SobreNosotros() {
                     </p>
                 </div>
             </div>
-
             <div className="nuestrosProveedores">
-                <div className="containerText">
+                <div className="container-text">
                     <h3>Algunos de nuestros Proveedores</h3>
                     <p></p>
                 </div>

@@ -1,14 +1,15 @@
-.logoutScreen {
-    position: absolute;
+.gray-background {
+    position: fixed;
     width: 100%;
     height: 115vh;
     background-color: rgba(55, 55, 55, 0.77);
     z-index: 9999;
     display: flex;
     justify-content: center;
+
 }
 
-.logoutCard {
+.logout-card {
     outline: 0.2vw solid rgb(58, 58, 58);
     border-radius: 1vw;
     width: 35vw;
@@ -20,20 +21,16 @@
     margin-top: 10vw;
 }
 
-.logoutCardImg {
+.logout-card-img {
     position: absolute;
     margin-top: 2vw;
     width: 13vw;
     margin-left: 2vw;
 }
 
-.logoutPR {
-    padding-top: 1vw;
-    width: 80%;
-    text-align: center;
-}
 
-.xButton {
+
+.x-close-button {
     padding: 0.5vw;
     display: flex;
     align-self: end;
@@ -44,13 +41,19 @@
     width: 1vw!important;
 }
 
-.xButton:hover {
+.x-close-button:hover {
     cursor: pointer;
 
 }
 
-.logoutP {
+.logout-text {
     font-size: 1vw;
     padding: 0px;
     padding-top: 12.5vw;
+}
+
+.logout-text_pr {
+    padding-top: 1vw;
+    width: 80%;
+    text-align: center;
 }

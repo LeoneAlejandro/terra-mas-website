@@ -1,4 +1,4 @@
-.contactoBanner {
+.contact-banner {
     height: 32vw;
     width: 100%;
     padding-top: 5vw;
@@ -8,7 +8,7 @@
     background-position: center center;
 }
 
-.contactoBannerTitulo {
+.contact-banner_title {
     text-align: center;
     padding-top: 8.4vw;
     font-size: 3.5vw;
@@ -17,17 +17,17 @@
     display: block;
 }
 
-.contactoTerraMas, .contactoTerraSalto {
+.contact-terra-mas, .contact-terra-salto {
     display: flex;
 }
 
-.listaContactosTerraMas {
-    width: 60%;
+.contact-list {
+    width: 55%;
     display: 1;
     padding-bottom: 2vw;
 }
 
-.contactosGoogleMap {
+.contact-google-map {
     width: 50%;
     border: 1.5vw solid white;
     display: 1;
@@ -36,21 +36,21 @@
 
 @media (min-width: 0px) and (max-width: 640px) { 
 
-    .contactoTerraMas {
+    .contact-terra-mas {
         display: flex;
         flex-direction: column;
     }
 
-    .contactoTerraSalto {
+    .contact-terra-salto {
         display: flex;
         flex-direction: column-reverse;
     }
 
-    .listaContactosTerraMas {
+    .contact-list {
         width: 100%;
     }
 
-    .contactosGoogleMap {
+    .contact-google-map {
         width: 100%;
         height: 20vw;
     }

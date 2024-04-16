@@ -3,10 +3,10 @@ import '../css/FieldViewBayer.css'
 export default function CultivarPlusBayer() {
 
     return(
-        <div className="cultivarPlusBayer">
-            <div className="cultivarPlus">
-                <div className="cultivarPlusIzquierda">
-                    <div className="containerText">
+        <div>
+            <div className="fieldview">
+                <div className="fieldview-left">
+                    <div className="container-text">
                         <h3>FIELDVIEW</h3>
                         <h5>Plataforma líder en agricultura digital</h5>
                         <p>
@@ -18,23 +18,23 @@ export default function CultivarPlusBayer() {
                         <p>
                         Desde la presiembra hasta la poscosecha, FieldView te acompaña para que puedas achicar todas las brechas que merman el rendimiento.
                         </p>
-                        <a className='conoceMasLink' href="https://climatefieldview.com.ar/?hsLang=en">CONSULTÁ NUESTROS COMBOS FIELDVIEW
-                            <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                        <a className='learn-more-link' href="https://climatefieldview.com.ar/?hsLang=en">CONSULTÁ NUESTROS COMBOS FIELDVIEW
+                            <svg className='arrow-svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="4" y1="12" x2="20" y2="12"/>
                                 <polyline points="14 6 20 12 14 18"/>
                             </svg>
                         </a>
                     </div>
                 </div>
-                <div className="cultivarPlusImagen">
+                <div className="fieldview-img">
                 </div>
             </div>
 
-            <div className="bayerInsumos">
-                <div className="bayerInsumosImagen"></div>
+            <div className="bayer-container">
+                <div className="bayer-img"></div>
 
-                <div className="bayerInsumosDerecha">
-                    <div className="containerText">
+                <div className="bayer-container-rigth">
+                    <div className="container-text">
                         <h3>BAYER INSUMOS</h3>
                         <p>
                             Bayer se destaca como líder mundial en soluciones agrícolas, 
@@ -47,8 +47,8 @@ export default function CultivarPlusBayer() {
                             con el medio ambiente, contribuyendo a la seguridad alimentaria global y al bienestar 
                             de las comunidades agrícolas.
                         </p>
-                        <a className='conoceMasLink' href="https://www.agro.bayer.com.ar/productos-proteccion-cultivos">TODOS NUESTROS PRODUCTOS
-                            <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                        <a className='learn-more-link' href="https://www.agro.bayer.com.ar/productos-proteccion-cultivos">TODOS NUESTROS PRODUCTOS
+                            <svg className='arrow-svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="4" y1="12" x2="20" y2="12"/>
                                 <polyline points="14 6 20 12 14 18"/>
                             </svg>

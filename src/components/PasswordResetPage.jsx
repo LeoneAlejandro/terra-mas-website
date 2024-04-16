@@ -57,24 +57,24 @@ export default function PasswordResetPage() {
   
   return (
     <>
-      <div className="passwordResetPage">
-        <div className="resetPasswordCard">
-          <img className="greenKeyIcon" src={greenKey}/>
-          <h2 className="rph2">Recuperar Contraseña</h2>
+      <div className="password-reset-main">
+        <div className="reset-password-card">
+          <img className="green-key-icon" src={greenKey}/>
+          <h2 className="prp-h2">Recuperar Contraseña</h2>
           <p>Por favor elige tu nueva contraseña</p>
-          <div className="rpInputRow">
-            <label className="resetLabel">Nueva contraseña:</label>
-            <input className="resetInput" value={password} 
+          <div className="prp-input-row">
+            <label className="prp-label">Nueva contraseña:</label>
+            <input className="prp-input" value={password}
               onChange={(event) => setPassword(event.target.value)} 
               />
           </div>
-          <div className="rpInputRow">
-            <label className="resetLabel">Repetir contraseña:</label>
-            <input className="resetInput" value={confirmPassword} 
+          <div className="prp-input-row">
+            <label className="prp-label">Repetir contraseña:</label>
+            <input className="prp-input" value={confirmPassword} 
               onChange={(event) => setConfirmPassword(event.target.value)}
               />
           </div>
-          {error && <div className="errorMessage">{error}</div>}
+          {error && <div className="error-message">{error}</div>}
           <button className='formButton' onClick={handleSubmit}>Resetear Contraseña</button>
         </div>
       </div>

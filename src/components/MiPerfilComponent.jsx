@@ -1,5 +1,6 @@
 import '../css/MiPerfilComponent.css'
-import pp from '../assets/ppgeneric.jpg'
+// import pp from '../assets/ppgeneric.jpg'
+import pp from '../assets/newAccount.png'
 import { useAuth } from './security/AuthContext';
 import { executeGetUserInfo } from './security/AuthenticationApiService'
 import { useEffect, useState } from 'react';
@@ -38,16 +39,15 @@ export default function MiPerfilComponent() {
                 <ChangePasswordPopup onClose={onCambiarCotnraseña}/>
             }
         
-            <div className="miPerfilComponent">
-
-                <div className="topBar">
-                    <div className="tbLabel">
+            <div className="my-profile-component">
+                <div className="mp-top-bar">
+                    <div className="mp-top-bar_label">
                         <p>HOME / USUARIO / PERFIL</p>
                     </div>
-                    <div className="tbLinks">
-                        <Link className='profileLink' to="/">
-                            <p className='prfileP'>VOLVER A LA PAGINA PRINCIPAL</p>
-                            <svg className='arrowSvgPp' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                    <div className="mp-top-bar-links">
+                        <Link className='mp-profile-link' to="/">
+                            <p className='mp-field-p'>VOLVER A LA PAGINA PRINCIPAL</p>
+                            <svg className='mp-arrow-svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="4" y1="12" x2="20" y2="12"/>
                                 <polyline points="14 6 20 12 14 18"/>
                             </svg>
@@ -55,12 +55,10 @@ export default function MiPerfilComponent() {
                     </div>
                 </div>
 
-                <div className="bottomCard">
-
-                    <div className="perfilCard">
-                            <img src={pp} alt="" className="perfilPhoto" />
-
-                            <div className="perfilInfo">
+                <div className="mp-bottom-card">
+                    <div className="mp-profile-card">
+                            <img src={pp} alt="" className="mp-profile-photo" />
+                            <div className="mp-profile-info">
                                 { userInfo ? 
                                     (<h1 style={{color:"rgb(122, 121, 121)"}}>{ userInfo.firstName} {userInfo.lastName}</h1>)
                                     :
@@ -69,143 +67,50 @@ export default function MiPerfilComponent() {
                             </div>
                     </div>
 
-                    <div className="perfilDerecha">
-
-                        <div className="perfilDerechaBody">
+                    <div className="mp-rigth">
+                        <div className="mp-rigth_body">
                             { userInfo ? (
                                 <>
-                                    <div className="row">
-                                        <div className="cibLabel">Nombre</div>
-                                        <div className="cibInfo">{userInfo.firstName}</div>
+                                    <div className="pf-row">
+                                        <div className="pf-row-label">Nombre</div>
+                                        <div className="pf-row-info">{userInfo.firstName}</div>
                                     </div>
                                     <hr />
-                                    <div className="row">
-                                        <div className="cibLabel">Apellido</div>
-                                        <div className="cibInfo">{userInfo.lastName}</div>
+                                    <div className="pf-row">
+                                        <div className="pf-row-label">Apellido</div>
+                                        <div className="pf-row-info">{userInfo.lastName}</div>
                                     </div>
                                     <hr />
-                                    <div className="row">
-                                        <div className="cibLabel">Email</div>
-                                        <div className="cibInfo">{userInfo.username}</div>
+                                    <div className="pf-row">
+                                        <div className="pf-row-label">Email</div>
+                                        <div className="pf-row-info">{userInfo.username}</div>
                                     </div>
 
                                     <hr />
-                                    <div className="row">
-                                        <div className="cibLabel">Rol</div>
-                                        <div className="cibInfo">{userInfo.appUserRole === "USER" ? "Usuario": "Administrador"}</div>
+                                    <div className="pf-row">
+                                        <div className="pf-row-label">Rol</div>
+                                        <div className="pf-row-info">{userInfo.appUserRole === "USER" ? "Usuario": "Administrador"}</div>
                                     </div>
                                     <hr />
-                                    <div className="row">
-                                        <div className="cibLabel">Contraseña</div>
-                                        <div className="cibInfo">*********</div>
+                                    <div className="pf-row">
+                                        <div className="pf-row-label">Contraseña</div>
+                                        <div className="pf-row-info">*********</div>
                                     </div>
-                                    <div className="rowChangePassword">
-                                        <button className='perfilButton' onClick={onCambiarCotnraseña}>Cambiar contraseña</button>
+                                    <div className="pf-row-changepassword">
+                                        <button className='pf-button' onClick={onCambiarCotnraseña}>Cambiar contraseña</button>
                                     </div>
                                 </>
                             ) : (
-
                                 <div className="loading">LOADING</div>
-
                             )}
                             </div>
-                        <div className="perfilDerechaSocalo">
-                                <Link className="socaloDekalb" to="https://www.agro.bayer.com.ar/dekalb"></Link>
-                                <Link className="socaloBayer" to="https://www.agro.bayer.com.ar/"></Link>
+                        <div className="mp-rigth_bottombar">
+                                <Link className="mp-rigth_bottombar-dekalb" to="https://www.agro.bayer.com.ar/dekalb"></Link>
+                                <Link className="mp-rigth_bottombar-bayer" to="https://www.agro.bayer.com.ar/"></Link>
                         </div>
                     </div>
                 </div>
             </div>
         </>
-
     )
 }
-
-
-
-
-    
-    // const modalRef = useRef();
-
-    // function closeModal(e) {
-    //   if(modalRef.current === e.target) {
-    //     setChangePasswordPopup(false)
-    //     resetPasswordValues()
-    //     setSuccessMessage('')
-    //   }
-    // }
-
-
-
-
-
-    // function handleRegCurrentPasswordChange(event) {
-    //     setCurrentPassword(event.target.value)
-    // }
-    // function handleRegNewPasswordChange(event) {
-    //     setNewPassword(event.target.value)
-    // }
-    // function handleRegConfirmationPasswordChange(event) {
-    //     setConfirmationPassword(event.target.value)
-    // }
-
-
-    // async function handleChangePassword() {
-    //     setErrorMessage('')
-    //     setSuccessMessage('')
-
-    //     if(newPassword === '' || confirmationPassword === '' || currentPassword === '') {
-    //         setErrorMessage("Debes completar todos los campos")
-    //         return
-    //     }
-
-    //     if(newPassword !== confirmationPassword) {
-    //         setErrorMessage("Las nuevas contraseñas no coinciden")
-    //         return
-    //     }
-
-    //     if(newPassword === currentPassword) {
-    //         setErrorMessage("La nueva contraseña es igual a la existente")
-    //         return
-    //     }
-
-    //     if(await authContext.changePassword(email, currentPassword, newPassword, confirmationPassword)) {
-    //         // navigate(`/`)
-    //         console.log("Contraseña guardada")
-    //         setErrorMessage('')
-    //         setSuccessMessage("Contraseña cambiada correctamente")
-    //         resetPasswordValues()
-    //     } else {
-    //         console.log("No se pudo cambiar contraseña")
-    //         setErrorMessage("La contraseña actual es incorrecta")
-    //     }
-    // }
-
-    // const resetPasswordValues = () => {
-    //     setCurrentPassword('')
-    //     setNewPassword('')
-    //     setConfirmationPassword('')
-    //     setErrorMessage('')
-    // }
-
-    // <div className="grayBackgroundChangePassword" ref={modalRef} onClick={closeModal}>
-    //     <img className='changePasswordIcon' src={greenKey} alt="" />
-    //     <div className="changePasswordCard">
-    //         <img className='xButton' src={closeButton} alt="X" onClick={() => (setChangePasswordPopup(false), resetPasswordValues()) }/>
-    //         <h6>Cambio de contraseña</h6>
-    //         <input value={currentPassword} onChange={handleRegCurrentPasswordChange} type="text" placeholder="Contraseña actual" />
-    //         <input value={newPassword} onChange={handleRegNewPasswordChange} type="text" placeholder="Nueva contraseña" />
-    //         <input value={confirmationPassword} onChange={handleRegConfirmationPasswordChange} type="text" placeholder="Repetir contraseña" />
-    //         { errorMessage && 
-    //         <div className="errorMessage">
-    //           { errorMessage }  
-    //         </div>
-    //         }
-    //         { successMessage && 
-    //         <div className="successMessage">
-    //           { successMessage }  
-    //         </div>
-    //         }
-    //         <button onClick={handleChangePassword} className='formButton' type='button'>Cambiar contraseña</button>
-    //     </div>
-    // </div>

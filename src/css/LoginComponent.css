@@ -13,7 +13,7 @@
 }
 
 .formButton:active,
-.ghost:active {
+.ghost-button:active {
 	transform: scale(0.95);
 }
 
@@ -25,7 +25,7 @@
 	cursor: pointer;
 }
 
-.ghost {
+.ghost-button {
     border-radius: 2vw;
 	border: 0.1vw solid #15431b;
 	color: #FFFFFF;
@@ -39,12 +39,12 @@
     font-family: 'Poppins';
 }
 
-.ghost:hover {
+.ghost-button:hover {
 	cursor: pointer;
 }
 
 
-.loginComponent {
+.login-component {
 	min-height: 88vh; 
 	/* VEEEEEEEEEEEEEEEEEEEEER */
 	padding-top: 7vw;
@@ -199,7 +199,7 @@ input:focus {
 	transform: translateX(20%);
 }
 
-.loginTitulo {
+.login-title-negative {
 	/* font-weight: bold; */
 	/* margin: 0; */
     padding: 0;
@@ -207,7 +207,7 @@ input:focus {
 	font-size: 2.7vw;
 }
 
-.loginParrafo {
+.login-p {
 	padding-left: 2vw;
     /* text-align: center; */
 	color: white;
@@ -215,12 +215,12 @@ input:focus {
 }
 
 
-.loginIniciar {
+.login-title {
 	color: #2c6933;
 	font-size: 2.7vw;
 }
 
-.requestPasswordResetCard {
+.request-password-reset-card {
 	outline: 0.2vw solid rgb(58, 58, 58);
     border-radius: 1vw;
     width: 35vw;
@@ -232,7 +232,7 @@ input:focus {
     margin-top: 10vw;
 }
 
-.resetPasswordImg {
+.reset-password-img {
     width: 8vw;
     position: absolute;
     margin-top: -4vw;

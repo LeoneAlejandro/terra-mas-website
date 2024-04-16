@@ -3,19 +3,17 @@ import '../css/HomeComponent.css'
 export default function HomeComponent() {
 
     return(
-        <div className="homeComponent">
-        
-
-            <div className="video">
+        <div>
+            <div className="dekalb-video">
                 <video  loop autoPlay muted>
                     <source src={require('../assets/videos/dekalbRinde.mp4')} type="video/mp4" /> 
                     Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
             </div>
 
-            <div className='sobreNosotros'>
-                <div className="sobreNosotrosTexto">
-                    <div className="containerText">
+            <div className='aboutus'>
+                <div className="aboutus-left">
+                    <div className="container-text">
 
                         <h3>SOBRE NOSOTROS</h3>
                         <p>
@@ -29,21 +27,21 @@ export default function HomeComponent() {
                             Asesorate con nuestros ingenieros sobre los mejores híbridos Dekalb para tu 
                             siembra, y nuestra gran variedad de productos de protección de cultivos.
                         </p>
-                        <a className='conoceMasLink' href="/contacto">CONTACTANOS
-                            <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                        <a className='learn-more-link' href="/contacto">CONTACTANOS
+                            <svg className='arrow-svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="4" y1="12" x2="20" y2="12"/>
                                 <polyline points="14 6 20 12 14 18"/>
                             </svg>
                         </a>
                     </div>
                 </div>
-                <div className="sobreNosotrosImagen"></div>
+                <div className="aboutus-img"></div>
             </div>  
 
-            <div className="nuevasTecnologias">
-                <div className="nuevasTecnologiasIzquierda"></div>
-                <div className="nuevasTecnologiasDerecha">
-                    <div className="containerText">
+            <div className="dekalb-card">
+                <div className="dekalb-card-left"></div>
+                <div className="dekalb-card-rigth">
+                    <div className="container-text">
                         <h3>DEKALB: VANGUARDIA EN MAÍZ</h3>
                         <h5>TECNOLOGÍAS VTPRO4 y TRECEPTA</h5>
                         <p>
@@ -56,8 +54,8 @@ export default function HomeComponent() {
                             que afectan el cultivo de maíz. Trecepta presenta un efectivo control contra 
                             Spodoptera frugiperda (Cogollero) y Diatraea saccharalis (Barrenador del tallo). 
                         </p>
-                        <a className='conoceMasLink' href="https://www.agro.bayer.com.ar/dekalb/catalogo">CONSULTÁ TODAS NUESTRAS VARIEDADES
-                            <svg className='arrowSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                        <a className='learn-more-link' href="https://www.agro.bayer.com.ar/dekalb/catalogo">CONSULTÁ TODAS NUESTRAS VARIEDADES
+                            <svg className='arrow-svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="4" y1="12" x2="20" y2="12"/>
                                 <polyline points="14 6 20 12 14 18"/>
                             </svg>
@@ -65,8 +63,6 @@ export default function HomeComponent() {
                     </div>
                 </div>
             </div>
-
         </div>
-
     )
 }

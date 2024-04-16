@@ -81,7 +81,7 @@ a:hover {
   color: green;
 }
 
-.conoceMasLink {
+.learn-more-link {
   /* margin-bottom: 3vw; */
   text-decoration: none;
   font-weight: bolder;
@@ -91,16 +91,16 @@ a:hover {
   /* justify-content: left; */
 }
 
-.conoceMasLink:visited {
+.learn-more-link:visited {
   color: rgb(37, 122, 22);
   font-weight: 400;
 }
 
-.conoceMasLink:hover {
+.learn-more-link:hover {
   color: gray;
 }
 
-.arrowSvg {
+.arrow-svg {
   margin-left: 0.5vw;
   /* height: 1.8vw; */
   width: 1.8vw;
@@ -109,11 +109,11 @@ a:hover {
   stroke-width: 2;
 }
 
-.conoceMasLink:hover .arrowSvg {
+.learn-more-link:hover .arrow-svg {
   stroke: gray;
 }
 
-.errorMessage {
+.error-message {
   padding: 10px 10px 10px 10px;
   font-size: 1vw;
   background-color: rgb(202, 135, 135);
@@ -122,7 +122,7 @@ a:hover {
   color: white;
 }
 
-.successMessage{
+.success-message {
   padding: 10px 10px 10px 10px;
   font-size: 1vw;
   background-color: green;
@@ -131,7 +131,7 @@ a:hover {
   color: white;
 }
 
-.linkHeader {
+.link-header {
   margin: 0;
   font-size: 1.4vw;
   padding: 0.5vw;
@@ -139,7 +139,7 @@ a:hover {
   color: white;
 }
 
-.linkHeader:hover {
+.link-header:hover {
   color: gray;
   background-color: white;
 }
@@ -152,7 +152,7 @@ h6 {
   padding-bottom: 1vw;
 }
 
-.hyperlinkButton {
+.hyperlink-button {
   color: rgb(114, 114, 114);
 	font-size: 1.25vw;
   background-color: transparent;
@@ -160,7 +160,7 @@ h6 {
   font-family: 'Poppins';
 }
 
-.hyperlinkButton:hover {
+.hyperlink-button:hover {
 	color: green;
   cursor: pointer;
 } 
@@ -171,12 +171,12 @@ h6 {
     font-size: 5vw;
   }
 
-  .arrowSvg {
+  .arrow-svg {
     height: 4vw;
     width: 4vw;
   }
 
-  p, h4, .conoceMasLink, h5, a, .linkHeader, .ddmLink {
+  p, h4, .learn-more-link, h5, a, .link-header, .ddm-link {
     font-size: 3vw;
   }
 }
@@ -191,16 +191,16 @@ h6 {
     font-size: 22px;
   }
   
-  .arrowSvg {
+  .arrow-svg {
     height: 24px;
     width: 24px;
   }
 
- .linkHeader{
+ .link-header{
   font-size: 1vw;
  }
 
-  p, h4, .conoceMasLink, a, .ddmLink {
+  p, h4, .learn-more-link, a, .ddm-link {
     font-size: 17px;
   }
 

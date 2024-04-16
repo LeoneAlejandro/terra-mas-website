@@ -70,21 +70,21 @@ export default function ChangePasswordPopup({ onClose }) {
 
     return(
         <>
-            <div className="grayBackgroundChangePassword" ref={modalRef} onClick={closeModal}>
-                <img className='changePasswordIcon' src={greenKey} alt="" />
-                <div className="changePasswordCard">
-                    <img className='xButton' src={closeButton} alt="X" onClick={onClose}/>
+            <div className="gray-background" ref={modalRef} onClick={closeModal}>
+                <img className='change-password-icon' src={greenKey} alt="" />
+                <div className="change-password-card">
+                    <img className='x-close-button' src={closeButton} alt="X" onClick={onClose}/>
                     <h6>Cambio de contraseña</h6>
                     <input value={currentPassword} onChange={handleRegCurrentPasswordChange} type="text" placeholder="Contraseña actual" />
                     <input value={newPassword} onChange={handleRegNewPasswordChange} type="text" placeholder="Nueva contraseña" />
                     <input value={confirmationPassword} onChange={handleRegConfirmationPasswordChange} type="text" placeholder="Repetir contraseña" />
                     { errorMessage && 
-                        <div className="errorMessage">
+                        <div className="error-message">
                         { errorMessage }  
                         </div>
                     }
                     { successMessage && 
-                        <div className="successMessage">
+                        <div className="success-message">
                         { successMessage }  
                         </div>
                     }

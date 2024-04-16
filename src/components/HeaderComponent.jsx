@@ -65,14 +65,15 @@ export default function HeaderComponent() {
   return (
     <header className={isScrolled ? 'header header-solid' : 'header'}>
         <nav className='navHeader'>
+          
           {showPopup && 
-            <div className="logoutScreen" ref={modalRef} onClick={closeModal}>
-                <div className='logoutCard'>
-                  <img className='xButton' src={closeButton} alt="X" onClick={() => setShowPopup(false) }/>
-                  <img className='logoutCardImg' src={logoutImg} alt="Imagen de deslogueo"/>
-                  <p className='logoutP'>Estas por cerra sesión, estas seguro?</p>
+            <div className="gray-background" ref={modalRef} onClick={closeModal}>
+                <div className='logout-card'>
+                  <img className='x-close-button' src={closeButton} alt="X" onClick={() => setShowPopup(false) }/>
+                  <img className='logout-card-img' src={logoutImg} alt="Imagen de deslogueo"/>
+                  <p className='logout-text'>Estas por cerra sesión, estas seguro?</p>
                   <button className='formButton' onClick={() => (setShowPopup(false), logout())}>
-                    <span className='transition'></span>
+                    {/* <span className='transition'></span> */}
                     Confirmar
                     </button>
                 </div>
@@ -86,9 +87,9 @@ export default function HeaderComponent() {
           { isScrolled &&
             <div className='left-buttons'>
                 <ul>
-                  <li><Link className='linkHeader' to="https://www.agro.bayer.com.ar/dekalb">DEKALB</Link></li>
-                  <li><Link className='linkHeader' to="https://www.cropscience.bayer.com.ar/soluciones-maiz">BAYER</Link></li>
-                  <li><Link className='linkHeader' to="/contacto">CONTACTO</Link></li>
+                  <li><Link className='link-header' to="https://www.agro.bayer.com.ar/dekalb">DEKALB</Link></li>
+                  <li><Link className='link-header' to="https://www.cropscience.bayer.com.ar/soluciones-maiz">BAYER</Link></li>
+                  <li><Link className='link-header' to="/contacto">CONTACTO</Link></li>
                 </ul>
             </div>
           }
@@ -101,18 +102,18 @@ export default function HeaderComponent() {
               </svg>
             </a>
 
-            {!isAuthenticated && <Link className='linkHeader' to="/login" onClick={handleMouseLeave}>LOGIN</Link>}
+            {!isAuthenticated && <Link className='link-header' to="/login" onClick={handleMouseLeave}>LOGIN</Link>}
 
             { isAuthenticated &&
             <ul>
-              <div className='ddmMenu' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                  <button className={`ddmButton ${isDropdownVisible ? 'dropdownActive' : ''}`}>¡Hola, {logoutName}!</button>
+              <div className='ddm-menu' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                  <button className={`ddm-button ${isDropdownVisible ? 'dropdownActive' : ''}`}>¡Hola, {logoutName}!</button>
                     {isDropdownVisible && 
                         <div className="dropdown-menu">
-                          <ul className="ddmUl">
-                            {isAdmin && <Link to="" className="ddmLink" onClick={handleMouseLeave} >Stock</Link>}
-                              <Link to="/perfil" className='ddmLink' onClick={handleMouseLeave}>Mi Perfil</Link>
-                              <Link className='ddmLink' onClick={handleOpenPopup}>Cerrar Sesión</Link>
+                          <ul className="ddm-ul">
+                            {isAdmin && <Link to="" className="ddm-link" onClick={handleMouseLeave} >Stock</Link>}
+                              <Link to="/perfil" className='ddm-link' onClick={handleMouseLeave}>Mi Perfil</Link>
+                              <Link className='ddm-link' onClick={handleOpenPopup}>Cerrar Sesión</Link>
                           </ul>
                       </div>                        
                     }

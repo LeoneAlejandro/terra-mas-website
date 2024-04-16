@@ -69,7 +69,7 @@ nav a {
 
 
 
-.ddmButton {
+.ddm-button {
     min-width: 10vw;
     font-family: 'Poppins';
     border: none;
@@ -80,7 +80,7 @@ nav a {
     background-color: transparent;
 }
 
-.ddmButton:hover {
+.ddm-button:hover {
     color: gray;
     background-color: white;
 }
@@ -91,7 +91,7 @@ nav a {
     cursor: pointer;
 }
 
-.ddmMenu {
+.ddm-menu {
     /* display: inline-flex; */
 }
 
@@ -100,19 +100,19 @@ nav a {
     border-radius: 2vw;
 }
 
-.ddmLi:hover .ddmButton {
+.ddmLi:hover .ddm-button {
     color: gray;
     background-color: white;
 }
 
-.ddmUl {
+.ddm-ul {
     width: 100%;
     position: absolute;
     flex-direction: column;
     transition: all linear 1s;
 }
 
-.ddmUl li:last-child {border-radius:  0px 0px 0.3vw 0.3vw !important;}
+.ddm-ul li:last-child {border-radius:  0px 0px 0.3vw 0.3vw !important;}
 
 .ddmLi {
     padding: 0.5vw;
@@ -125,7 +125,7 @@ nav a {
     color: #fff;
 }
 
-.ddmLink {
+.ddm-link {
     font-size: 1.3vw;
     margin: 0px;
     height: 100%;
@@ -134,10 +134,10 @@ nav a {
     padding: 0.5vw;
 }
 
-.ddmLink:last-child {border-radius:  0px 0px 0.4vw 0.4vw !important;}
+.ddm-link:last-child {border-radius:  0px 0px 0.4vw 0.4vw !important;}
 
 
-.ddmLink:hover {
+.ddm-link:hover {
     background: gray;
     cursor: pointer;
     color: #fff;
@@ -163,11 +163,11 @@ nav a {
         height: 5vw;
     }
 
-    .ddmLink {
+    .ddm-link {
         font-size: 2.5vw;
     }
 
-    .ddmButton {
+    .ddm-button {
         font-size: 4vw;
     }
     
@@ -187,7 +187,7 @@ nav a {
         height: 1.5vw;
     }
 
-    .ddmLink, .ddmButton {
+    .ddm-link, .ddm-button {
         font-size: 1vw;
     }
 }

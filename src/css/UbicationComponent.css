@@ -1,15 +1,15 @@
-.ubicacionComponent {
+.ubicacion-component {
     display: flex;
     background-color: white;
 }
 
-.googleMapTM {
+.ubication-map-container {
     width: 50%;
     border:0;
     display: 1;
 }
 
-.ubicacionIzquierda {
+.ubicacion-left {
     width: 50%;
     display: 1;
     padding-bottom: 1vw;
@@ -52,25 +52,25 @@
 
 @media (min-width: 0px) and (max-width: 640px) { 
 
-    .ubicacionComponent {
+    .ubicacion-component {
         display: flex;
         flex-direction: column;
         background-color: white;
     }
 
-    .googleMapTM {
+    .ubication-map-container {
         width: 100%;
         height: 30vw;
     }
 
-    .ubicacionIzquierda {
+    .ubicacion-left {
         width: 100%;
     }
 }
 
 @media (min-width: 640px) and (max-width: 1200px) { 
 
-    .googleMapTM {
+    .ubication-map-container {
         width: 80%;
     }
 }

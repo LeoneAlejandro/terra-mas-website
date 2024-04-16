@@ -41,11 +41,6 @@ export default function TerraMasSiteApp() {
 
                                 <Route path='/login' element={<LoginComponent/>}/>
 
-                                {/* <Route path='/sobre-nosotros' element={<>
-                                        <SobreNosotros/>
-                                        <UbicationComponent />
-                                    </>} /> */}
-
                                 <Route path='/perfil' element={
                                     <AuthenticatedRoute>
                                         <MiPerfilComponent />
