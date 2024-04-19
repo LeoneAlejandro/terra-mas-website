@@ -65,7 +65,7 @@ export default function LoginComponent() {
 
 
         if(await authContext.register(singupFirstName, singupLastName, singupEmail, singupPassword)) {
-            navigate(`/`)
+            navigate(`/?accountCreated=true`)
         } else {
             console.log("el registro fue incorrecto")
             setShowSingupErrorMessage("El correo ya está en uso")

@@ -15,14 +15,17 @@ export default function MiPerfilComponent() {
     const [userInfo, setUserInfo] = useState(null);
     const [changePasswordPopup, setChangePasswordPopup] = useState(false);
 
-
     useEffect(() => {
         async function fetchUserInfo() {
             try {
+                //TODO: Llamar authContext, no API v
                 const userInfoResponse = await executeGetUserInfo(email);
                 setUserInfo(userInfoResponse.data);
             } catch (error) {
                 console.error('Error buscando usuario:', error);
+                authContext.logout()
+                alert("Tu sesion expiró, por favor vuelve a iniciar sesión")
+                window.location.href = "/login"
             }
         };
 

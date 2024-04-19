@@ -105,9 +105,9 @@ export default function AuthProvider({ children }) {
         }
     }
 
-    async function resetPassword(email, newPassword) {
+    async function resetPassword(email, newPassword, urlUID) {
         try {
-            const response = await executeResetPassword(email, newPassword)
+            const response = await executeResetPassword(email, newPassword, urlUID)
             if(response.status === 200) {
                 return response
             } else {

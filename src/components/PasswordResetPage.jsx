@@ -10,7 +10,8 @@ export default function PasswordResetPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [error, setError] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('')
 
   const authContext = useAuth();
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ export default function PasswordResetPage() {
           setEmail(response.data)
           console.log("uid existe")
          } else {
-        //DESCOMENTAR ESTO PARA QUE FUNCIONEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+        //TODO: DESCOMENTAR ESTO PARA QUE FUNCIONE
           // alert("El link que quisiste acceder ya no existe.")
           // navigate(`/`)
         }
@@ -36,19 +37,21 @@ export default function PasswordResetPage() {
   }, [urlUID]);
 
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async () => {
+    setErrorMessage('')
     if (password !== confirmPassword) {
-      setError('Las contraseñas no coinciden');
+      setErrorMessage('Las contraseñas no coinciden');
       return;
     }
 
     try {
-      const changePasswordResponse = await authContext.resetPassword(email, password)
+      const changePasswordResponse = await authContext.resetPassword(email, password, urlUID)
       if(changePasswordResponse.status === 200) {
-        alert("Contraseña cambiada exitosamente")
-        navigate(`/login`)
+        setSuccessMessage('Contraseña cambiada exitosamente !')
+        console.log(urlUID)
       } else {
-        alert("No se pudo cambiar la password")
+        // alert("No se pudo cambiar la password")
+        setErrorMessage('Este link expiró o fue usado')
       }
     } catch(error) {
       console.log(error)
@@ -74,8 +77,15 @@ export default function PasswordResetPage() {
               onChange={(event) => setConfirmPassword(event.target.value)}
               />
           </div>
-          {error && <div className="error-message">{error}</div>}
-          <button className='formButton' onClick={handleSubmit}>Resetear Contraseña</button>
+          {errorMessage && <div className="error-message">{errorMessage}</div>}
+          {successMessage && <div className="success-message">{successMessage}</div>}
+          
+          {!successMessage &&
+            <button className='formButton' onClick={handleSubmit}>Resetear Contraseña</button>
+          }
+          {successMessage && 
+            <button className='formButton' onClick={()=> navigate('/login')}>Volver</button>
+          }
         </div>
       </div>
     </>

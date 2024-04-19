@@ -106,3 +106,21 @@ video {
         background-image: url('../assets/trecepta_banner.jpg');
     }
 }
+
+.account-created {
+    outline: 0.2vw solid rgb(58, 58, 58);
+    border-radius: 1vw;
+    width: 35vw;
+    height: 14vw;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vw;
+}
+
+.account-created p {
+    font-size: 1vw;
+    padding: 0px;
+    padding-top: 0.9vw;
+}

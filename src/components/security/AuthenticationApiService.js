@@ -16,7 +16,7 @@ export const executeRequestPasswordChange
     = (email) => apiClient.post(`resetpassword/${email}`)
 
 export const executeResetPassword
-    = (email, newPassword) => apiClient.post(`resetpassword/cofirm-new-password`, { email, newPassword })
+    = (email, newPassword, uid) => apiClient.post(`resetpassword/cofirm-new-password`, { email, newPassword, uid })
 
 export const executeUidValidation
     = (uid) => apiClient.get(`/resetpassword/verify-uid/${uid}`)
