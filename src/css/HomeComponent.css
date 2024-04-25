@@ -42,6 +42,7 @@ video {
 
 .container-text {
     padding-left: 3vw;
+    padding-right: 2vw;
 }
 
 
@@ -122,5 +123,12 @@ video {
 .account-created p {
     font-size: 1vw;
     padding: 0px;
-    padding-top: 0.9vw;
+    padding-top: 0.2vw;
+    margin-bottom: 0vw;
+    padding-bottom: 0.5vw;
+}
+
+.account-created h2{
+    padding: 0px;
+    margin: 0px
 }

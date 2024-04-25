@@ -16,7 +16,7 @@ export default function HomeComponent() {
         if(accountCreated) {
             setMessagePopup(true)
         }
-    })
+    }, [accountCreated])
 
     const modalRef = useRef();
 
@@ -40,6 +40,7 @@ export default function HomeComponent() {
                         <div className="account-created">
                             <img className='x-close-button' src={closeButton} alt="X" onClick={handleClosePopup}/>
                             <img className='reset-password-img' src={newAccountIcon} alt="Imagen de recuperación de contraseña"/>
+                            <h2>Bienvenido !</h2>
                             <p>Tu cuenta ah sido exitosamente creada.</p>
                             <button className='formButton' onClick={(() => navigate('/login'))}>
                             Iniciar Sesión

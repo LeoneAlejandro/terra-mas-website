@@ -12,20 +12,20 @@ export default function UbicationComponent() {
                             <h4>Administración</h4>
                             <a  href="mailto:administracion@terramas.com.ar">administracion@terramas.com.ar</a>
                             <br />
-                            <a href="+5492477433335">+54 9 2477-433335</a>
+                            <a href="tel:+5492477433335">+54 9 2477-433335</a>
                         </li>
                         <li>
                             <h4 >Logísitica</h4>
                             <a  href="mailto:logistica@terramas.com.ar">logistica@terramas.com.ar</a>
                             <br />
-                            <a href="+5492477662610">+54 9 2477-662610</a>
+                            <a href="tel:+5492477662610">+54 9 2477-662610</a>
                         </li>
                         <li>
                             <h4 >Ventas</h4>
                             <a  href="mailto:ventas@terramas.com.ar">ventas@terramas.com.ar</a><br />
                             <a  href="mailto:gonzalomartin@terramas.com.ar">gonzalomartin@terramas.com.ar</a>
                             <br />
-                            <a href="+5492477468564">+54 9 2477-468564</a>
+                            <a href="tel:+5492477468564">+54 9 2477-468564</a>
                         </li>
                         <li>
                             <h4 >Ubicación</h4>

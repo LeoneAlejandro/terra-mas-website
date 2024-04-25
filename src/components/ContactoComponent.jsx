@@ -17,7 +17,7 @@ export default function ContactoComponent() {
                                 <h4>Administración</h4>
                                 <a  href="mailto:administracion@terramas.com.ar">administracion@terramas.com.ar</a>
                                 <br />
-                                <a href="tel: +5492477433335 ">+54 9 2477-433335</a>
+                                <a href="tel:+5492477433335 ">+54 9 2477-433335</a>
                             </li>
                             <li>
                                 <h4 >Logísitica</h4>
@@ -30,7 +30,7 @@ export default function ContactoComponent() {
                                 <a  href="mailto:ventas@terramas.com.ar">ventas@terramas.com.ar</a><br />
                                 <a  href="mailto:gonzalomartin@terramas.com.ar">gonzalomartin@terramas.com.ar</a>
                                 <br />
-                                <a href="+5492477468564">+54 9 2477-468564</a>
+                                <a href="tel:+5492477468564">+54 9 2477-468564</a>
                             </li>
                             <li>
                                 <h4 >Ubicación</h4>
@@ -54,17 +54,17 @@ export default function ContactoComponent() {
                                     <h4>Administración</h4>
                                     <a  href="mailto:administracion@terrasalto.com.ar">administracion@terrasalto.com.ar</a>
                                     <br />
-                                    <a href="+5492474   424903">+54 9 2474-424903</a>
+                                    <a href="tel:+5492474424903">+54 9 2474-424903</a>
                                 </li>
                                 <li>
                                     <h4 >Ventas</h4>
                                     <a  href="mailto:ventas@terrasalto.com.ar">ventas@terrasalto.com.ar</a>
                                     <br />
-                                    <a href="+5492477687667">+54 9 2477-687667</a>
+                                    <a href="tel:+5492477687667">+54 9 2477-687667</a>
                                 </li>
                                 <li>
                                     <h4 >Ubicación</h4>
-                                    <a href="https://maps.app.goo.gl/Fem2yRsx6GAjPivP6">Av Italia 399 (esquina San Juan), Salto, Buenos Aires</a>
+                                    <a href="https://maps.app.goo.gl/Fem2yRsx6GAjPivP6">Ruta 191 KM 96, Salto, Buenos Aires</a>
                                 </li>
                             </ul>
                     </div>

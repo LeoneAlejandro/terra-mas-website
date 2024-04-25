@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react';
 import { useAuth } from './security/AuthContext';
-import { useNavigate } from 'react-router-dom';
 import closeButton from '../assets/close_icon.jpg';
 import recoverPasswordJpeg from '../assets/reset-password.png'
 import '../css/AccountRecoveryRequestComponent.css'
@@ -9,7 +8,6 @@ export default function AccountRecoveryRequest({onClose}) {
 
     const [resetPasswordEmail, setResetPasswordEmail] = useState('')
 
-    const navigate = useNavigate();
     const authContext = useAuth();
     const modalRef = useRef();
     const [errorMessage, setErrorMessage] = useState('')
@@ -28,6 +26,12 @@ export default function AccountRecoveryRequest({onClose}) {
     async function handleRecoverPassword() {
         setErrorMessage('')
         setSuccessMessage('')
+
+        if(!resetPasswordEmail) {
+            setErrorMessage('Ingresa un correo electrónico válido por favor.')
+            return
+        } 
+        //TODO: onClick sacar el botón y poner una ruedita o algo así
         try {
             const changePasswordResponse = await authContext.requestPasswordChange(resetPasswordEmail);
             if(changePasswordResponse.status === 200) {
@@ -37,12 +41,14 @@ export default function AccountRecoveryRequest({onClose}) {
                 // onClose()
             } else {
                 // alert('No pudimos enviar el correo, por favor revisa el correo electrónico ingresado')
-                setErrorMessage('No tenemos cuentas con el correo electrónico ingresado')
+                setErrorMessage('El email ingresado no está registrado.')
             }
         } catch (error) {
             console.error('Error initiating password recovery:', error);
-            alert('Failed to initiate password recovery.');
+            // alert('Failed to initiate password recovery.');
+            setErrorMessage('El email ingresado no está registrado.')
         }
+
     };
 
     return(

@@ -1,13 +1,14 @@
-import '../css/MiPerfilComponent.css'
+import '../css/ProfileComponent.css'
 // import pp from '../assets/ppgeneric.jpg'
 import pp from '../assets/newAccount.png'
 import { useAuth } from './security/AuthContext';
-import { executeGetUserInfo } from './security/AuthenticationApiService'
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ChangePasswordPopup from './ChangePasswordPopupComponent';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
-export default function MiPerfilComponent() {
+export default function ProfileComponent() {
 
     const authContext = useAuth();
     const email = authContext.username
@@ -18,8 +19,9 @@ export default function MiPerfilComponent() {
     useEffect(() => {
         async function fetchUserInfo() {
             try {
-                //TODO: Llamar authContext, no API v
-                const userInfoResponse = await executeGetUserInfo(email);
+                //TODO: REMOVE 3s WAIT
+                await new Promise(resolve => setTimeout(resolve, 3000));
+                const userInfoResponse = await authContext.fetchUser(email)
                 setUserInfo(userInfoResponse.data);
             } catch (error) {
                 console.error('Error buscando usuario:', error);
@@ -30,7 +32,7 @@ export default function MiPerfilComponent() {
         };
 
         fetchUserInfo()
-    },[])
+    },[authContext, email])
 
     const onCambiarCotnraseña = () => {
         setChangePasswordPopup(!changePasswordPopup)
@@ -63,9 +65,9 @@ export default function MiPerfilComponent() {
                             <img src={pp} alt="" className="mp-profile-photo" />
                             <div className="mp-profile-info">
                                 { userInfo ? 
-                                    (<h1 style={{color:"rgb(122, 121, 121)"}}>{ userInfo.firstName} {userInfo.lastName}</h1>)
+                                    (<h1 className='pc-name'>{ userInfo.firstName} {userInfo.lastName}</h1>)
                                     :
-                                    (<h1 style={{color:"rgb(122, 121, 121)"}}>Perfil</h1>)
+                                    (<h1 className='pc-name'><Skeleton/></h1>)
                                 }
                             </div>
                     </div>
@@ -104,7 +106,7 @@ export default function MiPerfilComponent() {
                                     </div>
                                 </>
                             ) : (
-                                <div className="loading">LOADING</div>
+                                    <Skeleton className='skeleton-5' count={5} />
                             )}
                             </div>
                         <div className="mp-rigth_bottombar">

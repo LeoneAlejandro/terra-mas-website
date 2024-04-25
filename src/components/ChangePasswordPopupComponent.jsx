@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { useAuth } from './security/AuthContext';
 import closeButton from '../assets/close_icon.jpg'
 import greenKey from '../assets/green-key.png'
-import '../css/MiPerfilComponent.css'
+import '../css/ProfileComponent.css'
 import '../css/ChangePasswordPopupComponent.css'
 
 export default function ChangePasswordPopup({ onClose }) {

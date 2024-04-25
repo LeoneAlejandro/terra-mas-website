@@ -7,7 +7,8 @@ import FooterComponent from './FooterComponent'
 import FieldViewBayer from './FieldViewBayer'
 import ContactoComponent from './ContactoComponent'
 import LoginComponent from './LoginComponent'
-import MiPerfilComponent from './MiPerfilComponent'
+import ProfileComponent from './ProfileComponent'
+import NotFoundComponent from './NotFoundComponent'
 import AuthProvider, { useAuth } from './security/AuthContext'
 import '../css/TerraMasSiteApp.css'
 import ScrollToTop from './ScrollToTop'
@@ -30,7 +31,6 @@ export default function TerraMasSiteApp() {
                     <ScrollToTop>
                         <HeaderComponent/>
                             <Routes>
-
                                 <Route path="/" element={<>
                                         <HomeComponent />
                                         <FieldViewBayer />
@@ -43,7 +43,7 @@ export default function TerraMasSiteApp() {
 
                                 <Route path='/perfil' element={
                                     <AuthenticatedRoute>
-                                        <MiPerfilComponent />
+                                        <ProfileComponent />
                                     </AuthenticatedRoute>
                                     } />
 
@@ -51,6 +51,8 @@ export default function TerraMasSiteApp() {
                                     <PasswordResetPage/>
                                     } />
 
+
+                                <Route path='*' element={<NotFoundComponent/>} />
                             </Routes>
                         <FooterComponent />
                     </ScrollToTop>
