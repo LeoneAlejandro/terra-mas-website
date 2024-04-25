@@ -150,7 +150,10 @@ export default function AuthProvider({ children }) {
     }
 
     return(
-        <AuthContext.Provider value={{ isAuthenticated, login, logout, register, fetchUser, changePassword, resetPassword, checkUidValidation, requestPasswordChange, firstName: firstName, username: email, token, userRole: userRole}}>
+        <AuthContext.Provider value={{ 
+            isAuthenticated, 
+            login, logout, register, fetchUser, changePassword, resetPassword, checkUidValidation, requestPasswordChange, 
+            firstName: firstName, username: email, token, userRole: userRole}}>
             {children}
         </AuthContext.Provider>
     )
