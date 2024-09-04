@@ -12,6 +12,7 @@ export default function PasswordResetPage() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('')
+  const [uidErrorPopup, setUidErrorPopup] = useState(false)
 
   const authContext = useAuth();
   const navigate = useNavigate();
@@ -23,11 +24,11 @@ export default function PasswordResetPage() {
         const response = await authContext.checkUidValidation(urlUID);
         if (response.status === 200) {
           setEmail(response.data)
-          console.log("uid existe")
          } else {
-        //TODO: DESCOMENTAR ESTO PARA QUE FUNCIONE
-          // alert("El link que quisiste acceder ya no existe.")
-          // navigate(`/`)
+          //TODO: Sacar esta alert
+          setUidErrorPopup(true)
+          alert("El link que quisiste acceder ya no existe.")
+          navigate(`/`)
         }
       } catch (error) {
         console.error('Error verifying UID:', error);
@@ -50,7 +51,6 @@ export default function PasswordResetPage() {
         setSuccessMessage('Contraseña cambiada exitosamente !')
         console.log(urlUID)
       } else {
-        // alert("No se pudo cambiar la password")
         setErrorMessage('Este link expiró o fue usado')
       }
     } catch(error) {
@@ -60,6 +60,15 @@ export default function PasswordResetPage() {
   
   return (
     <>
+      {/* { uidErrorPopup && 
+        <div className="gray-background">
+          <div className="logout-card">
+
+          </div> 
+        </div>
+      } */}
+
+
       <div className="password-reset-main">
         <div className="reset-password-card">
           <img className="green-key-icon" src={greenKey}/>

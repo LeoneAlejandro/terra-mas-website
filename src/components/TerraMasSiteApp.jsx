@@ -11,7 +11,7 @@ import ProfileComponent from './ProfileComponent'
 import NotFoundComponent from './NotFoundComponent'
 import AuthProvider, { useAuth } from './security/AuthContext'
 import '../css/TerraMasSiteApp.css'
-import ScrollToTop from './ScrollToTop'
+import ScrollToTop from './auxiliar/ScrollToTop'
 import PasswordResetPage from './PasswordResetPage'
 
 export default function TerraMasSiteApp() {

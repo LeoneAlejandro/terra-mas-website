@@ -3,6 +3,7 @@ import { useAuth } from './security/AuthContext';
 import closeButton from '../assets/close_icon.jpg';
 import recoverPasswordJpeg from '../assets/reset-password.png'
 import '../css/AccountRecoveryRequestComponent.css'
+import Spinner from './auxiliar/Spinner.js'
 
 export default function AccountRecoveryRequest({onClose}) {
 
@@ -12,6 +13,7 @@ export default function AccountRecoveryRequest({onClose}) {
     const modalRef = useRef();
     const [errorMessage, setErrorMessage] = useState('')
     const [successMessage, setSuccessMessage] = useState('')
+    const [buttonState, setButtonState] = useState('active')
     
     function closeModal(e) {
         if(modalRef.current === e.target) {
@@ -26,27 +28,28 @@ export default function AccountRecoveryRequest({onClose}) {
     async function handleRecoverPassword() {
         setErrorMessage('')
         setSuccessMessage('')
+        setButtonState('loading')
 
         if(!resetPasswordEmail) {
             setErrorMessage('Ingresa un correo electrónico válido por favor.')
+            setButtonState('active')
             return
         } 
-        //TODO: onClick sacar el botón y poner una ruedita o algo así
+
         try {
             const changePasswordResponse = await authContext.requestPasswordChange(resetPasswordEmail);
             if(changePasswordResponse.status === 200) {
-                // alert('El correo fue enviado exitosamente!')
                 setSuccessMessage('El correo fue enviado exitosamente !')
                 setResetPasswordEmail('')
-                // onClose()
+                setButtonState('success')
             } else {
-                // alert('No pudimos enviar el correo, por favor revisa el correo electrónico ingresado')
                 setErrorMessage('El email ingresado no está registrado.')
+                setButtonState('active')
             }
         } catch (error) {
             console.error('Error initiating password recovery:', error);
-            // alert('Failed to initiate password recovery.');
             setErrorMessage('El email ingresado no está registrado.')
+            setButtonState('active')
         }
 
     };
@@ -59,18 +62,25 @@ export default function AccountRecoveryRequest({onClose}) {
                     <img className='reset-password-img' src={recoverPasswordJpeg} alt="Imagen de recuperación de contraseña"/>
                     <p className='logout-text_pr'>Para recuperar tu contraseña ingresá tu correo electrónico y envía la solicitud. Una vez realizado recibirás un correo electrónico para resetearla.</p>
                     <input value={resetPasswordEmail} onChange={handleResetPasswordEmailChange} type="text" placeholder='Email' />
-                    {errorMessage && 
+                    { errorMessage && 
                         <div className="error-message">{errorMessage}</div>
                     }
-                    {successMessage && 
+                    { successMessage && 
                         <div className="success-message">{successMessage}</div>
                     }
-                    {!successMessage &&
+
+
+                    { (buttonState === 'active') &&                     
                         <button className='formButton' onClick={handleRecoverPassword}>
                             Reestablecer contraseña
                         </button>
                     }
-                    { successMessage &&
+                    { (buttonState === 'loading') &&
+                        <div className="formButton">
+                            <Spinner />
+                        </div>
+                    }
+                    { (buttonState === 'success') &&
                         <button className='formButton' onClick={onClose}>
                             Volver
                         </button>

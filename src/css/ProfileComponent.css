@@ -1,9 +1,9 @@
 .my-profile-component {
     display: grid;
-    /* height: 97vh; */
     background-color: rgb(198, 198, 198);
     padding: 3vw;
-    padding-top: 5.5vw;
+    padding-top: 6.3vw;
+    min-height: 90vh;
 
     /* background-image: url('../assets/corn-field-back.jpg'); */
     background-image: url('../assets/orange-field-3g.jpg');
@@ -13,6 +13,7 @@
 }
 
 .pc-name {
+    font-size: 3vw;
     color: rgb(122, 121, 121);
     margin: 0vw 2vw 0vw 2vw;
     padding: 0vw;
@@ -30,6 +31,8 @@
     border-radius: 1vw;
     margin-bottom: 2vw;
     display: flex;
+    /* position: absolute; */
+    
 }
 
 .mp-profile-link {
@@ -78,12 +81,12 @@
     border-radius: 1vw;
     width: 30%;
     text-align: center;
-    /* height: 70vh; */
+    height: 30vw;
 }
 
 .mp-profile-photo {
     height: 15vw;
-    padding-top: 3vw;
+    padding-top: 4.5vw;
 }
 
 .mp-profile-info {
@@ -143,18 +146,22 @@
 }
 
 .pf-row-label {
+    font-size: 1.3vw;
     width: 10vw;
     margin-left: 1vw;
     color: rgb(122, 121, 121);
 }
 
 .pf-row-info {
+    font-size: 1.3vw;
     color: rgb(122, 121, 121);
 }
 
 .pf-row-changepassword {
+    padding: 0vw;
     padding-left: 11vw;
     padding-top: 0.7vw;
+    margin: 0vw;
 }
 
 .pf-button {

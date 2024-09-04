@@ -1,6 +1,5 @@
 import '../css/NotFoundComponent.css'
 import error404 from '../assets/error404.png'
-// import allLogos from '../assets/all-logos.png'
 
 export default function NotFoundComponent() {
 
@@ -13,7 +12,6 @@ export default function NotFoundComponent() {
             <br />
             podés volver a nuestra web haciendo click <a href='/' className='nfc-a'>acá</a>.
             </p>
-            {/* <img className='signature-logos' src={allLogos} alt="Logos" /> */}
         </div>
     )
 }

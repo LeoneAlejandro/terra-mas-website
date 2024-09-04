@@ -78,6 +78,7 @@ a:hover {
 }
 
 .learn-more-link {
+  color: rgb(37, 122, 22);
   /* margin-bottom: 3vw; */
   text-decoration: none;
   font-weight: bolder;
@@ -162,6 +163,10 @@ h6 {
 	color: green;
   cursor: pointer;
 } 
+
+hr {
+  margin: 0.5vw;
+}
 
 @media (min-width: 0) and (max-width: 640px) { 
 

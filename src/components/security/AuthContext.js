@@ -72,17 +72,18 @@ export default function AuthProvider({ children }) {
     }
 
     async function fetchUser(email) {
-        try{
-            const response = await executeGetUserInfo(email)
+        // try{
+            // const response = await executeGetUserInfo(email)
 
-            if(response.status === 200) {
-                return response
-            } else {
-                alert("Error al cargar el usuario")
-            }
-        } catch(error) {
-            return error
-        }
+            return await executeGetUserInfo(email)
+        //     if(response.status === 200) {
+        //         return response
+        //     } else {
+        //         throw new error
+        //     }
+        // } catch(error) {
+        //     return error
+        // }
     }
 
     async function changePassword(email, currentPassword, newPassword, confirmationPassword) {
@@ -154,7 +155,6 @@ export default function AuthProvider({ children }) {
             isAuthenticated, 
             login, logout, register, fetchUser, changePassword, resetPassword, checkUidValidation, requestPasswordChange, 
             firstName: firstName, username: email, token, userRole: userRole}}>
-            {children}
-        </AuthContext.Provider>
+            {children} </AuthContext.Provider>
     )
 }

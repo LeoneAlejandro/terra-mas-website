@@ -18,7 +18,7 @@
 
 
 .login-component {
-	/* min-height: 84vh;  */
+	min-height: 88vh; 
 	/* VEEEEEEEEEEEEEEEEEEEEER */
 	padding-top: 7vw;
     padding-left: 20%;
@@ -181,7 +181,7 @@ input:focus {
 }
 
 .login-p {
-	padding-left: 2vw;
+	/* padding-left: 2vw; */
     /* text-align: center; */
 	color: white;
 	font-size: 1vw;
